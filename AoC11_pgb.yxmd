@@ -1,0 +1,965 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="18" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="10" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>L.LL.LL.LL</c>
+            </r>
+            <r>
+              <c>LLLLLLL.LL</c>
+            </r>
+            <r>
+              <c>L.L.L..L..</c>
+            </r>
+            <r>
+              <c>LLLL.LL.LL</c>
+            </r>
+            <r>
+              <c>L.LL.LL.LL</c>
+            </r>
+            <r>
+              <c>L.LLLLL.LL</c>
+            </r>
+            <r>
+              <c>..L.L.....</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>L.LLLLLL.L</c>
+            </r>
+            <r>
+              <c>L.LLLLL.LL</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>TEST</AnnotationText>
+          <DefaultAnnotationText>TEST</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="198" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>Field1_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Split to rows</AnnotationText>
+          <DefaultAnnotationText>Split to rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="102" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Row</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>RowID</AnnotationText>
+          <DefaultAnnotationText>RowID</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="294" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>RecordID</UpdateField_Name>
+          <CreateField_Name>Col</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Col]+1</Expression>
+          <GroupByFields>
+            <Field field="Row" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>[Row-1:Col]+1
+ColID</AnnotationText>
+          <DefaultAnnotationText>[Row-1:Col]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="155">
+      <GuiSettings>
+        <Position x="774" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>AoC11_pgb_2 (77)</Name>
+          <AnnotationText><![CDATA[Find 1 valid target seat in each direction
+]]></AnnotationText>
+          <DefaultAnnotationText><![CDATA[Find 1 valid target seat in each direction]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="AoC11_pgb_2.yxmc" />
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="414" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>data</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-12-11 07:28:02</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>.</Operand>
+              <StartDate>2020-12-11 07:28:02</StartDate>
+              <EndDate>2020-12-11 07:28:02</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>[data] != "."
+remove floorspace</AnnotationText>
+          <DefaultAnnotationText>[data] != "."</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="97">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="522" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Row</UpdateField_Name>
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCount &lt;= 8</Expression_Cond>
+          <Expression_Loop>RowCount + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>look in 8 directions, 1 row per direction to look in</AnnotationText>
+          <DefaultAnnotationText>for all seats, find a seat in each direction</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="98">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="642" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Switch([RowCount],[RowCount],1,'u' &#xA;,2, 'd' ,3, 'l' ,4, 'r' ,5, 'ul' ,6, 'dl',7, 'dr',8, 'ur')" field="dir" size="2" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dir = Switch([RowCount],[RowCount],1,'u' 
+,2, 'd' ,3, 'l' ,4, 'r' ,5, 'ul' ,6, '...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="116">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="917" y="122" width="301" height="164" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Part 2</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="142">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1134" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\peter\AppData\Local\Temp\Engine2_30760_c190da5d4187904b9be1aed743d3afb0_\Engine_30760_5f1aaa5a654ff04ab8c5e3a54bd3344d~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="143">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+            <Position x="1038" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Last</Mode>
+              <N>1</N>
+              <GroupFields orderChanged="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Last 1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+        </Node>
+        <Node ToolID="156">
+          <GuiSettings>
+            <Position x="942" y="171" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name>AoC11_pgb_3 (93)</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="AoC11_pgb_3.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="140">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="930" y="342" width="257" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Do the target seats make sense?</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="78">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1050" y="462" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_42280_938ebc8145194970affe518c2c40111a_\Engine_972_bff402a1e55249b4834cae0fc6973b93_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="82">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="954" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="0">
+                <Field field="Row" order="Ascending" />
+                <Field field="Col" order="Ascending" />
+                <Field field="dir" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Row - Ascending
+Col - Ascending
+dir - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="100">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1074" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Row" action="GroupBy" rename="Row" />
+                <SummarizeField field="Col" action="GroupBy" rename="Col" />
+                <SummarizeField field="dir" action="Count" rename="Count" />
+                <SummarizeField field="dir" action="CountDistinct" rename="CountDistinct_dir" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="102">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1170" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="CountDistinct_dir" action="GroupBy" rename="CountDistinct_dir" />
+                <SummarizeField field="CountDistinct_dir" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="104">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1266" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_42280_938ebc8145194970affe518c2c40111a_\Engine_972_91c3b503e7494c30b4a0b583a54db981_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="147">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="18" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="98" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>LLLLLLLLL.L.LLLLLLLLLLLLL.LLLLLLL.LLLL.LLLLLLLLLLLLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLL.LLLLLLLL.LLLLLLLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLL.LLLLLLLL.LL.LLLLLLL.LLLLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLL.LLLLLLLL.LLLLLLL.LLLL.LLLLLLLLLLLL.LLLLLLLLLL.LLLLL.LLLLLLL.LLLLL.LLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL..LLLLLLL.LLLLLLL.LLLL.LLLLLLLLLLLLLLLLLL.LLLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLL.L.LLLLLLLLLLLLLLLLLLLLLLL.LLLL..LLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLL.LLLLLLLLLLLLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>L.LLLL.L..L.LL....L......L...LL.LL..L....L...LL.LL.L.LL.LL..LL............L..L...LL.L.L.L..LLL...L</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLL.L.LLLLLL.LLLLLLLLLL.LLLL.LL.LLLLL.LLLLLLLL.LLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLL.LLLLLLLL.LLLL.LL.LLLL.LLLLLLLLL.LLL.LLLL..LLL.LLLLL.LL.LLLL.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLL..LLLLLL.LLLLLLLLLLLLLL.LLLLLLLLLLLLL..LLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LL.LLL.LLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LL.LLLLLL.LLLL.LLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLL..LLLLLLLL..LLL.LLLLL.LL.LLLLLLLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.LLLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>....LL.....LL..LLL..L......LL.LL......L.....L.....LL.LLLL..L.L.......LL.LL.....L.........L...L..L.</c>
+            </r>
+            <r>
+              <c>LLLLLLL.L.LLLLLL.LLLLLLLL.LLLLLLL.LLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLL.LLLLLLLLLLLLLLL.LLLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLLL.LLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLL.LLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.L.LLLLLL.LLLLLLL.LLLLLLLLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLLL.LLLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>.LLL....L....LL....L..........LL.L................L...L...LL......L.....LLLL...LL..L.....L.L..L.L.</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLLLLLLLLLL.LLLL.LLL.LLLLL.LLLLLLLLLLLLL.LLLLL.LL.LLLLLLLLLL.LLLL..LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL..LLLLLLLLLL.LLL.LLLLLLLLLLLL.LLLLLLLLL.LLLLL.LLLLLLL.LLLLL.LLLLLLLLLLLLL.LLLLL.LLL..LLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLL.L.LLLLLLLL.LLLLLLL.LLLLLLLLLLLLLL.L.LLLLLL.LLLLLLLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLL.LLLLLLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>.L.LL..L.....L...L...L.L...L..L..L.L.L.L........L..LL....L...L...L.....LL.L............L..L..L....</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLLLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLL.LLLLLL.LLL.LLLLLLLLLLLLLL.LLLLL.LL.LLLL.LLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLL.L.</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLL.L.LLLL.LLLLLLLLL.LLLLLLLL.L.LLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLL.LLLLL.L.LLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLL.LLLLLLLLLLLLLLLL.LL.LLLL..LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLL.LLL.L.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>L.L..L.L..L.....LL...LL..LL..L.L...L...L.....L...L.......L...LL.............LL.LL.LL....L.L.LL.L..</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLL.LLLLLLLLLLLLL.LLLLLLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLL.LL.LLLLL.LLL.LLL.LLLLLLLLLLLLLL.LLLLLLLL.LLLL.LLLLLLLLLLL.L.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLLLLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLLLLLL.LLL.LLLL.LLLLLLLLL.LLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>.........L.L.L.LL.LLLLL..LL..LL......LL.L.L.L...L.L.....L.LL.....LLL.L.L.L.....LL...L..L....L..L.L</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.L.LLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLLLLLLLLLLLLL..LLLLLL.LL.LL.LLLL.LLLLL.LLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLL.LLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLL.LLL.LLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.LLLLLLLLLLLLLL.LLLLLLLL.LLLL.LLLLLLLLLLLLL.LLLLL.LLLLL.LLLL.LLLL</c>
+            </r>
+            <r>
+              <c>.L.........LL....L..LL.LLL.LL.L...L..L.....LLLL..........L.LLL...LLLL.L..L.L.LLL...LLL..L.L......L</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLL.LLLLLLLLLLLLLL.LL.LLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLL.LLLLLLLL.LLLLLLLLLLLL..LLLLLLLL.LLLLLLLL.LLLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLL.LLLLLLLLLLLLLL.LLLL.LLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLL.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLL.LLL.LLLLLL.LLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLL.LLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>.LL.L.LL.LLL.LLL.L....L....LL..L.L............L.....L.....L....LLLL..L......L.L...LL...LL.L...L.L.</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLL.LLLL.LLLLLLL.LLLLLLLLLLLLLL.LLLLLLLL.LLLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLL.LLLLL.LLLLL.L.LLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.LLLLLLLLLLLLLL.LLLLLLLL.LLLLLLLLLLLLLLLLLL.LLL.LLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLL.LLLLLLLL.LLL.LLL.LLLLLLLLLLLLLLLLLLLLLLL.LLLL.LLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLL.</c>
+            </r>
+            <r>
+              <c>L.LLLLLLL.LLLLLL.LLLLLLLL.LLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>.L..L.L....L.........L.L...L..L.L..LL.........L.L....L..LL...L....L.L...LLL.L.LL.LL.L..L...LL....L</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLL.LLLLLLLL..LLLLLLLL.LLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLL..LLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLLLLLLLLLLLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLLLLLLLLLLLL.LLLL.LLL.LLLLLLLLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLL.LLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLL.LL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.L.LL.LLLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLLLL.LLL.L.LLLLL.LL.LLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLL.LL.LLLLLL.LLLLLLLL.LLLLLLL.LLLLLLLLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLL.LL.LLLLL.LLLL..LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.LLLL.LLL.LLLLL.LLLLLLLL.LLLL.LLLLLLLLLLLLL.LLLLLLLLLLL.LL.LLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLLLLLLLLLL.LLLLLLLLLLLLLL.LLLLLLLL.LLLL.LLLLLLL.LLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>.LL..L....L.....L......LLL......L...LLLL....LLL......L..L......L..LL...LL...L......LL.LL....L..L..</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLLLL..L.LL.LLLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLLLLLLLLLL.LLLL...LLLLLLL.LLLLLLLL.LLLL.LLLL.LL.LLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLL.LLLLLLLL.LLLLLLLL.LLLLLLLLL.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLL.LLLLLLLL.LLLLLLL.LLLLLLLLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLL.LLLLLL.LLLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>...L.LL..........L....L.L.L....L......LL..........L.L.....LL..LL..L..L..L..L...L..L..L..L.....L...</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLL.LLLLLLL.LLLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLLLLLLLLLLLLLLL.LLLLLLLLL.LLLLLLLL.LLLL..LL.L.LLLLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLL.LLLLLLL..LLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLL.LLLLLLL..LLLL.LLLLLLL.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.L.LLLLL.LLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLL.LLLL.LLLLLL.LLLLLLLLLLLLLLLL.LLLLLLLLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLLLLL.LL.LL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLL.LLLLLLLL.LLLLLLLLLLLLLLLLLLLLLL.LLLLLLLL.LLLLLLLLLL.LL..LLL.LLL.L.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLLLLLLLLLLL.LLL.LLLL.LLLLLLLLLLLLL.LLLL.LLLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLL.LLLLLLLLLLLLL.LLLLL.LLLLL.L.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>..L..L.LL..L.L..LL...L.L...L....LL..L.....L..L..L..L.....LL.L..L.LL......L.LLLL.LLL.LL.....L.L....</c>
+            </r>
+            <r>
+              <c>LLLLLLL.L.LLLLLLLLLLLLLLLLLLLLLLL.LLLL.LLLLLLLLL.LLLLLLLLLLLL.LLLLLL.LLLLLLL.LLLL.LLLL.L.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LL.LLLLL.LLLLLLLLLLLL.LLLLLLLLLLLLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLLLLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLL.LLL.LLLLLLLLLLLLL.L.LLLLLLL.LLLLLLLLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLLLLLLL.LLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLL.LLLLLLLLL.LLLLLL.L.LLLL.LLLLL.LLLLLLLLLLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLLL.LLLLLLLLLLL.L.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLL.LLLLLLLL..LLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLL.LLLL.L.LLLL.LLLLLLLLLLL.LLLL.LLLLL.LLLLLLLLLLLL.LLLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLLLLLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>L.LLLLLLL.LLLLLL.L.LLLLLL..LLLLLLLLLL.LLLLLLLLLL.LLLLLLLL.LLLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLLLLLLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLL.LLLLLLLL.LLLLLLLLLLL.L.LLL.L.LLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>.LLLLLLLL.LLLLLL.LLLLLLLL.LLLL.LL.LLLL.LLLLLLLLL.LLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLL.LLL.LLLLLLLL.LLLLLLLLLLLLLLLLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLL.LLLLLLLL.LLLL.LL.LLLLLLL.LLLLLL.LLLLLLLL.LLLL.LLLLLLLLLLLLL.LLLLL.LLLLL.LLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLL..LLLLLL.LLL.LLLL.LLLLLLL.LLLL.LLLLLLLLL.LLLL.LLL.LLLL.LLLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLL</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>FULL</AnnotationText>
+          <DefaultAnnotationText>FULL</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="76">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="581" y="16" width="313" height="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Part1</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="70">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="810" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\peter\AppData\Local\Temp\Engine2_30760_c190da5d4187904b9be1aed743d3afb0_\Engine_30760_cc70a781221f5349bafb60a77725939c~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="141">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+            <Position x="714" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Last</Mode>
+              <N>1</N>
+              <GroupFields orderChanged="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Last 1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+        </Node>
+        <Node ToolID="154">
+          <GuiSettings>
+            <Position x="606" y="65" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name>AoC11_pgb (68)</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="AoC11_pgb.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="85" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="155" Connection="Output23" />
+      <Destination ToolID="82" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="155" Connection="Output23" />
+      <Destination ToolID="156" Connection="C Input26" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="True" />
+      <Destination ToolID="156" Connection="A Input16" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="True" />
+      <Destination ToolID="97" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="True" />
+      <Destination ToolID="155" Connection="Full" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="98" Connection="Output" />
+      <Destination ToolID="155" Connection="remaining" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="True" />
+      <Destination ToolID="154" Connection="Input16" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="97" Connection="Output" />
+      <Destination ToolID="98" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="143" Connection="Output" />
+      <Destination ToolID="142" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="156" Connection="List" />
+      <Destination ToolID="143" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="Output" />
+      <Destination ToolID="78" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="Output" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Output" />
+      <Destination ToolID="102" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="102" Connection="Output" />
+      <Destination ToolID="104" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="147" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="Output" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="154" Connection="List" />
+      <Destination ToolID="141" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC11_pgb</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

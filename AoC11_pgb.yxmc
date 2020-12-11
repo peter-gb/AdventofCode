@@ -1,0 +1,1119 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="138" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Row</UpdateField_Name>
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCount &lt;= 8</Expression_Cond>
+          <Expression_Loop>RowCount + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Look at 8 other possible seats for each seat</AnnotationText>
+          <DefaultAnnotationText>Look at 8 other possible seats for each seat</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="RowCount" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="258" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Switch([RowCount],[RowCount],1,'u' &#xA;,2, 'd'&#xA;,3, 'l'&#xA;,4, 'r'&#xA;,5, 'ul'&#xA;,6, 'dl'&#xA;,7, 'dr'&#xA;,8, 'ur')" field="dir" size="1073741823" type="V_WString" />
+            <FormulaField expression="If Contains([dir],'l') THEN [Col]-1&#xA;ELSEIF Contains([dir],'r')THEN  [Col] +1&#xA;ELSE [Col] ENDIF" field="col_compare" size="8" type="Int64" />
+            <FormulaField expression="If Contains([dir],'u') THEN [row]-1&#xA;ELSEIF Contains([dir],'d')THEN  [row] +1&#xA;ELSE [Row] ENDIF" field="row_compare" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dir = Switch([RowCount],[RowCount],1,'u' 
+,2, 'd'
+,3, 'l'
+,4, 'r'
+,5, 'ul'
+,6, '...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="dir" size="1073741823" source="Formula: Switch([RowCount],[RowCount],1,'u' &#xA;,2, 'd'&#xA;,3, 'l'&#xA;,4, 'r'&#xA;,5, 'ul'&#xA;,6, 'dl'&#xA;,7, 'dr'&#xA;,8, 'ur')" type="V_WString" />
+            <Field name="col_compare" source="Formula: If Contains([dir],'l') THEN [Col]-1&#xA;ELSEIF Contains([dir],'r')THEN  [Col] +1&#xA;ELSE [Col] ENDIF" type="Int64" />
+            <Field name="row_compare" source="Formula: If Contains([dir],'u') THEN [row]-1&#xA;ELSEIF Contains([dir],'d')THEN  [row] +1&#xA;ELSE [Row] ENDIF" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="390" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Row" />
+            <Field field="Col" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="row_compare" />
+            <Field field="col_compare" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Row" selected="False" input="Left_" />
+                <SelectField field="Left_Col" selected="False" input="Left_" />
+                <SelectField field="Right_Row" selected="True" input="Right_" />
+                <SelectField field="Right_Col" selected="True" input="Right_" />
+                <SelectField field="Right_data" selected="True" input="Right_" />
+                <SelectField field="Right_RowCount" selected="False" input="Right_" />
+                <SelectField field="Right_row_compare" selected="True" input="Right_" />
+                <SelectField field="Right_col_compare" selected="True" input="Right_" />
+                <SelectField field="Left_data" selected="True" rename="compare_data" input="Left_" />
+                <SelectField field="Right_dir" selected="True" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Row" />
+            <Field field="Col" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="row_compare" source="Formula: If Contains([dir],'u') THEN [row]-1&#xA;ELSEIF Contains([dir],'d')THEN  [row] +1&#xA;ELSE [Row] ENDIF" type="Int64" />
+            <Field name="col_compare" source="Formula: If Contains([dir],'l') THEN [Col]-1&#xA;ELSEIF Contains([dir],'r')THEN  [Col] +1&#xA;ELSE [Col] ENDIF" type="Int64" />
+            <Field name="compare_data" size="1" source="TextInput:" type="String" />
+            <Field name="dir" size="1073741823" source="Formula: Switch([RowCount],[RowCount],1,'u' &#xA;,2, 'd'&#xA;,3, 'l'&#xA;,4, 'r'&#xA;,5, 'ul'&#xA;,6, 'dl'&#xA;,7, 'dr'&#xA;,8, 'ur')" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="dir" size="1073741823" source="Formula: Switch([RowCount],[RowCount],1,'u' &#xA;,2, 'd'&#xA;,3, 'l'&#xA;,4, 'r'&#xA;,5, 'ul'&#xA;,6, 'dl'&#xA;,7, 'dr'&#xA;,8, 'ur')" type="V_WString" />
+            <Field name="col_compare" source="Formula: If Contains([dir],'l') THEN [Col]-1&#xA;ELSEIF Contains([dir],'r')THEN  [Col] +1&#xA;ELSE [Col] ENDIF" type="Int64" />
+            <Field name="row_compare" source="Formula: If Contains([dir],'u') THEN [row]-1&#xA;ELSEIF Contains([dir],'d')THEN  [row] +1&#xA;ELSE [Row] ENDIF" type="Int64" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="row_compare" />
+            <Field field="col_compare" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="618" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Row" action="GroupBy" rename="Row" />
+            <SummarizeField field="Col" action="GroupBy" rename="Col" />
+            <SummarizeField field="data" action="GroupBy" rename="data" />
+            <SummarizeField field="occupied" action="Sum" rename="Sum_occupied" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>How many occupied?</AnnotationText>
+          <DefaultAnnotationText>How many occupied?</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+            <Field name="Sum_occupied" source="Summarize: Sum - occupied" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Row" order="Asc" />
+            <Field field="Col" order="Asc" />
+            <Field field="data" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="510" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="REGEX_CountMatches([compare_data], '#')" field="occupied" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Occupied?</AnnotationText>
+          <DefaultAnnotationText><![CDATA[occupied = REGEX_CountMatches([compare_data], '#')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="row_compare" source="Formula: If Contains([dir],'u') THEN [row]-1&#xA;ELSEIF Contains([dir],'d')THEN  [row] +1&#xA;ELSE [Row] ENDIF" type="Int64" />
+            <Field name="col_compare" source="Formula: If Contains([dir],'l') THEN [Col]-1&#xA;ELSEIF Contains([dir],'r')THEN  [Col] +1&#xA;ELSE [Col] ENDIF" type="Int64" />
+            <Field name="compare_data" size="1" source="TextInput:" type="String" />
+            <Field name="dir" size="1073741823" source="Formula: Switch([RowCount],[RowCount],1,'u' &#xA;,2, 'd'&#xA;,3, 'l'&#xA;,4, 'r'&#xA;,5, 'ul'&#xA;,6, 'dl'&#xA;,7, 'dr'&#xA;,8, 'ur')" type="V_WString" />
+            <Field name="occupied" source="Formula: REGEX_CountMatches([compare_data], '#')" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="726" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=4) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" field="data" size="1" type="String" />
+            <FormulaField expression="REGEX_CountMatches([data], '#')" field="Occupied" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>occupy/leave as necessary</AnnotationText>
+          <DefaultAnnotationText>data = IF ([data] = 'L' AND [Sum_occupied] = 0) OR
+([data] = '#' AND [Sum_occupi...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Formula: IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=4) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" type="String" />
+            <Field name="Sum_occupied" source="Summarize: Sum - occupied" type="Int64" />
+            <Field name="Occupied" source="Formula: REGEX_CountMatches([data], '#')" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1326" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Reseat</Name>
+          <Abbrev>R</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>R Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="654" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="  REGEX_CountMatches([data],'#')" field="Occupied" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>how many occupied before</AnnotationText>
+          <DefaultAnnotationText><![CDATA[Occupied =   REGEX_CountMatches([data],'#')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Occupied" source="Formula:   REGEX_CountMatches([data],'#')" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1146" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>List</Name>
+          <Abbrev>L</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>List each step of the way</AnnotationText>
+          <DefaultAnnotationText>L Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="894" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_Sum_Occupied" selected="True" rename="Source_Sum_Occupied" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>compare</AnnotationText>
+          <DefaultAnnotationText>compare</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Source_Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="798" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Occupied" action="Sum" rename="Sum_Occupied" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>total occ before</AnnotationText>
+          <DefaultAnnotationText>total occ before</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="810" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Occupied" action="Sum" rename="Sum_Occupied" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>total occ after</AnnotationText>
+          <DefaultAnnotationText>total occ after</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1026" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.IterationNumber]+1" field="Round" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Round = [Engine.IterationNumber]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Source_Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Round" size="1073741823" source="Formula: [Engine.IterationNumber]+1" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="42" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input16</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="71" />
+              <Fields>
+                <Field name="Row" />
+                <Field name="Col" />
+                <Field name="data" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>10</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>#</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>#</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1110" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Sum_Occupied] != [Source_Sum_Occupied]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Sum_Occupied] != [Source_Sum_Occupied]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Formula: IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=4) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" type="String" />
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Source_Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Formula: IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=4) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" type="String" />
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Source_Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="990" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_Sum_occupied" selected="False" input="Target_" />
+                <SelectField field="Target_Occupied" selected="False" input="Target_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Stop logic - if start == finish then done</AnnotationText>
+          <DefaultAnnotationText>Stop logic - if start == finish then done</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Formula: IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=4) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" type="String" />
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Source_Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1230" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Row" selected="True" />
+            <SelectField field="Col" selected="True" />
+            <SelectField field="data" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Send all new seat allocations back to start</AnnotationText>
+          <DefaultAnnotationText>Send all new seat allocations back to start</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Formula: IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=4) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="270" width="120" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[for each seat, find row&col of the seats adjacent, ]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="255" g="255" b="128" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="3" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Join" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="19" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="19" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="11" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="11" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="True" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC11_pgb</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (17)</Name>
+          <ToolId value="17" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (16)</Name>
+              <ToolId value="16" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (8)</Name>
+              <ToolId value="8" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (10)</Name>
+              <ToolId value="10" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImage>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</MacroImage>
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input16</Input>
+        <Output>Reseat</Output>
+        <IterationLimit value="1000" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="8" Selected="True" />
+        <Tool ToolId="10" Selected="True" />
+        <Tool ToolId="16" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

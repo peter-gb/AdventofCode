@@ -1,0 +1,4409 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="342" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Row" />
+            <Field field="Col" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="row_compare" />
+            <Field field="col_compare" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Row" selected="False" input="Left_" />
+                <SelectField field="Left_Col" selected="False" input="Left_" />
+                <SelectField field="Right_Row" selected="True" input="Right_" />
+                <SelectField field="Right_Col" selected="True" input="Right_" />
+                <SelectField field="Right_data" selected="True" input="Right_" />
+                <SelectField field="Left_data" selected="True" rename="compare_data" input="Left_" />
+                <SelectField field="Right_row_compare" selected="False" input="Right_" />
+                <SelectField field="Right_col_compare" selected="False" input="Right_" />
+                <SelectField field="Right_dir" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Row" />
+            <Field field="Col" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="compare_data" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="row_compare" source="TextInput:" type="Byte" />
+            <Field name="col_compare" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="row_compare" />
+            <Field field="col_compare" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1302" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Reseat</Name>
+          <Abbrev>R</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>R Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="666" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="  REGEX_CountMatches([data],'#')" field="Occupied" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Occupied =   REGEX_CountMatches([data],'#')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="Occupied" source="Formula:   REGEX_CountMatches([data],'#')" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1122" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>List</Name>
+          <Abbrev>L</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>L Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="882" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_Sum_Occupied" selected="True" rename="Source_Sum_Occupied" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Source_Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="786" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Occupied" action="Sum" rename="Sum_Occupied" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="786" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Occupied" action="Sum" rename="Sum_Occupied" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="990" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.IterationNumber]+1" field="Round" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Round = [Engine.IterationNumber]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Source_Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Round" size="1073741823" source="Formula: [Engine.IterationNumber]+1" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="18" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>A Input16</Name>
+          <Abbrev>A</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="71" />
+              <Fields>
+                <Field name="Row" />
+                <Field name="data" />
+                <Field name="Col" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                  <c>L</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>L</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>L</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>L</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>L</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>L</c>
+                  <c>9</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>L</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>L</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>L</c>
+                  <c>2</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>L</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>L</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>L</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>L</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>L</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>L</c>
+                  <c>9</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>L</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>L</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>L</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>L</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>L</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>L</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>L</c>
+                  <c>2</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>L</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>L</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>L</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>L</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>L</c>
+                  <c>9</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>L</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>L</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>L</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>L</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>L</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>L</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>L</c>
+                  <c>9</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>L</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>L</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>L</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>L</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>L</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>L</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>L</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>L</c>
+                  <c>9</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>L</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>L</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>L</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>L</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>L</c>
+                  <c>2</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>L</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>L</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>L</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>L</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>L</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>L</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>L</c>
+                  <c>9</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>L</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>L</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>L</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>L</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>L</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>L</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>L</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>L</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>L</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>L</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>L</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>L</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>L</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>L</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>L</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>L</c>
+                  <c>9</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>L</c>
+                  <c>10</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>A Input</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1086" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Sum_Occupied] != [Source_Sum_Occupied]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Sum_Occupied] != [Source_Sum_Occupied]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Formula: IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=5) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" type="String" />
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Source_Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Formula: IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=5) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" type="String" />
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Source_Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="966" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_Sum_occupied" selected="False" input="Target_" />
+                <SelectField field="Target_Occupied" selected="False" input="Target_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Formula: IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=5) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" type="String" />
+            <Field name="Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+            <Field name="Source_Sum_Occupied" source="Summarize: Sum - Occupied" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1194" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Row" selected="True" />
+            <SelectField field="Col" selected="True" />
+            <SelectField field="data" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Formula: IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=5) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="198" y="318" width="132" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>target seats to look at, get new arrangement for each current seat</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="255" g="255" b="128" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="42" y="90" width="132" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>current arrangement</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="255" g="255" b="128" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="114" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>C Input26</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="452" />
+              <Fields>
+                <Field name="Row" />
+                <Field name="Col" />
+                <Field name="row_compare" />
+                <Field name="col_compare" />
+                <Field name="dir" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>10</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>10</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>10</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>10</c>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>10</c>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>8</c>
+                  <c>5</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>3</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>10</c>
+                  <c>3</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>10</c>
+                  <c>9</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>l</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>r</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>7</c>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>ul</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>ur</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>dl</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>7</c>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>dr</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>d</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>u</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>d</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="row_compare" source="TextInput:" type="Byte" />
+            <Field name="col_compare" source="TextInput:" type="Byte" />
+            <Field name="dir" size="2" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="138" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="234" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Row" />
+            <Field field="Col" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Row" />
+            <Field field="Col" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Row" selected="False" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_Col" selected="False" rename="Right_Col" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Row" />
+            <Field field="Col" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="row_compare" source="TextInput:" type="Byte" />
+            <Field name="col_compare" source="TextInput:" type="Byte" />
+            <Field name="dir" size="2" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Row" order="" />
+            <Field field="Col" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="row_compare" source="TextInput:" type="Byte" />
+            <Field name="col_compare" source="TextInput:" type="Byte" />
+            <Field name="dir" size="2" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Row" />
+            <Field field="Col" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="342" y="246" width="132" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>find arrangement of target seat</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="255" g="255" b="128" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="606" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Row" action="GroupBy" rename="Row" />
+            <SummarizeField field="Col" action="GroupBy" rename="Col" />
+            <SummarizeField field="data" action="GroupBy" rename="data" />
+            <SummarizeField field="occupied" action="Sum" rename="Sum_occupied" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Summarize: GroupBy - data" type="String" />
+            <Field name="Sum_occupied" source="Summarize: Sum - occupied" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Row" order="Asc" />
+            <Field field="Col" order="Asc" />
+            <Field field="data" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="498" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="REGEX_CountMatches([compare_data], '#')" field="occupied" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[occupied = REGEX_CountMatches([compare_data], '#')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="TextInput:" type="Byte" />
+            <Field name="Col" source="TextInput:" type="Byte" />
+            <Field name="data" size="1" source="TextInput:" type="String" />
+            <Field name="compare_data" size="1" source="TextInput:" type="String" />
+            <Field name="occupied" source="Formula: REGEX_CountMatches([compare_data], '#')" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="714" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=5) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" field="data" size="1" type="String" />
+            <FormulaField expression="REGEX_CountMatches([data], '#')" field="Occupied" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>data = IF ([data] = 'L' AND [Sum_occupied] = 0) OR
+([data] = '#' AND [Sum_occupi...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Byte" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Byte" />
+            <Field name="data" size="1" source="Formula: IF ([data] = 'L' AND [Sum_occupied] = 0) OR&#xA;([data] = '#' AND [Sum_occupied] &gt;=5) &#xA;&#xA;THEN  Switch([data],[data],'L','#','#','L')&#xA;ELSE [data] ENDIF" type="String" />
+            <Field name="Sum_occupied" source="Summarize: Sum - occupied" type="Int64" />
+            <Field name="Occupied" source="Formula: REGEX_CountMatches([data], '#')" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="438" y="66" width="204" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Logic as per part 1
+occupy/release accordingly
+assess before and after totals</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="255" g="255" b="128" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Join" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="19" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="19" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="11" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="11" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="True" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="31" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="31" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="3" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Join" />
+      <Destination ToolID="3" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC11_pgb_3</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (17)</Name>
+          <ToolId value="17" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (16)</Name>
+              <ToolId value="16" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (8)</Name>
+              <ToolId value="8" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (10)</Name>
+              <ToolId value="10" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (26)</Name>
+              <ToolId value="26" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImage>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</MacroImage>
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>A Input16</Input>
+        <Output>Reseat</Output>
+        <IterationLimit value="10000" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="8" Selected="False" />
+        <Tool ToolId="10" Selected="False" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
