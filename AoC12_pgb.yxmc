@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="450" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_val" selected="True" input="Target_" type="Int64" size="8" />
+                <SelectField field="Source_wpt_x" selected="True" input="Source_" type="Int64" size="8" />
+                <SelectField field="Source_wpt_y" selected="True" input="Source_" type="Int64" size="8" />
+                <SelectField field="Source_pos_x" selected="True" input="Source_" type="Int64" size="8" />
+                <SelectField field="Source_pos_y" selected="True" input="Source_" type="Int64" size="8" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" size="3" source="TextInput:" type="String" />
+            <Field name="inst" size="1" source="TextInput:" type="String" />
+            <Field name="val" source="TextInput:" type="Int64" />
+            <Field name="wpt_x" source="TextInput:" type="Int64" />
+            <Field name="wpt_y" source="TextInput:" type="Int64" />
+            <Field name="pos_x" source="TextInput:" type="Int64" />
+            <Field name="pos_y" source="TextInput:" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="546" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [inst] = 'E' THEN [wpt_x]+[val]&#xA;ELSEIF [inst] = 'W' THEN [wpt_x]-[val]&#xA;&#xA;ELSEIF [val] = 180 THEN -[wpt_x]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'R90'&#xA;OR [inst]+TOstring([val]) = 'L270' THEN [wpt_y]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'L90'&#xA;OR [inst]+TOstring([val]) = 'R270' THEN -[wpt_y]&#xA;&#xA;ELSE [wpt_x]&#xA;ENDIF&#xA;" field="newwpt_x" size="1073741823" type="V_WString" />
+            <FormulaField expression="IF [inst] = 'N' THEN [wpt_y]+[val]&#xA;ELSEIF [inst] = 'S' THEN [wpt_y]-[val]&#xA;&#xA;ELSEIF [val] = 180 THEN -[wpt_y]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'R90'&#xA;OR [inst]+TOstring([val]) = 'L270' THEN -[wpt_x]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'L90'&#xA;OR [inst]+TOstring([val]) = 'R270' THEN [wpt_x]&#xA;&#xA;&#xA;ELSE [wpt_y]&#xA;ENDIF" field="new wpt_y" size="1073741823" type="V_WString" />
+            <FormulaField expression="IF [inst] = 'F' THEN [pos_x]+  ([wpt_x] * [val])&#xA;&#xA;ELSE [pos_x] ENDIF" field="pos_x" size="8" type="Int64" />
+            <FormulaField expression="IF [inst] = 'F' THEN [pos_y] +  ([wpt_y] * [val])&#xA;&#xA;ELSE [pos_y] ENDIF" field="pos_y" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>New values</AnnotationText>
+          <DefaultAnnotationText>newwpt_x = IF [inst] = 'E' THEN [wpt_x]+[val]
+ELSEIF [inst] = 'W' THEN [wpt_x]-[...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" size="3" source="TextInput:" type="String" />
+            <Field name="inst" size="1" source="TextInput:" type="String" />
+            <Field name="val" source="TextInput:" type="Int64" />
+            <Field name="wpt_x" source="TextInput:" type="Int64" />
+            <Field name="wpt_y" source="TextInput:" type="Int64" />
+            <Field name="pos_x" source="Formula: IF [inst] = 'F' THEN [pos_x]+  ([wpt_x] * [val])&#xA;&#xA;ELSE [pos_x] ENDIF" type="Int64" />
+            <Field name="pos_y" source="Formula: IF [inst] = 'F' THEN [pos_y] +  ([wpt_y] * [val])&#xA;&#xA;ELSE [pos_y] ENDIF" type="Int64" />
+            <Field name="newwpt_x" size="1073741823" source="Formula: IF [inst] = 'E' THEN [wpt_x]+[val]&#xA;ELSEIF [inst] = 'W' THEN [wpt_x]-[val]&#xA;&#xA;ELSEIF [val] = 180 THEN -[wpt_x]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'R90'&#xA;OR [inst]+TOstring([val]) = 'L270' THEN [wpt_y]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'L90'&#xA;OR [inst]+TOstring([val]) = 'R270' THEN -[wpt_y]&#xA;&#xA;ELSE [wpt_x]&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="new wpt_y" size="1073741823" source="Formula: IF [inst] = 'N' THEN [wpt_y]+[val]&#xA;ELSEIF [inst] = 'S' THEN [wpt_y]-[val]&#xA;&#xA;ELSEIF [val] = 180 THEN -[wpt_y]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'R90'&#xA;OR [inst]+TOstring([val]) = 'L270' THEN -[wpt_x]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'L90'&#xA;OR [inst]+TOstring([val]) = 'R270' THEN [wpt_x]&#xA;&#xA;&#xA;ELSE [wpt_y]&#xA;ENDIF" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="450" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>next</Name>
+          <Abbrev>N</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>New Values</AnnotationText>
+          <DefaultAnnotationText>N Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="666" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="pos_x" selected="True" />
+            <SelectField field="pos_y" selected="True" />
+            <SelectField field="newwpt_x" selected="True" rename="wpt_x" />
+            <SelectField field="new wpt_y" selected="True" rename="wpt_y" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Replace old</AnnotationText>
+          <DefaultAnnotationText>Replace old</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="pos_x" source="Formula: IF [inst] = 'F' THEN [pos_x]+  ([wpt_x] * [val])&#xA;&#xA;ELSE [pos_x] ENDIF" type="Int64" />
+            <Field name="pos_y" source="Formula: IF [inst] = 'F' THEN [pos_y] +  ([wpt_y] * [val])&#xA;&#xA;ELSE [pos_y] ENDIF" type="Int64" />
+            <Field name="wpt_x" size="1073741823" source="Formula: IF [inst] = 'E' THEN [wpt_x]+[val]&#xA;ELSEIF [inst] = 'W' THEN [wpt_x]-[val]&#xA;&#xA;ELSEIF [val] = 180 THEN -[wpt_x]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'R90'&#xA;OR [inst]+TOstring([val]) = 'L270' THEN [wpt_y]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'L90'&#xA;OR [inst]+TOstring([val]) = 'R270' THEN -[wpt_y]&#xA;&#xA;ELSE [wpt_x]&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="wpt_y" size="1073741823" source="Formula: IF [inst] = 'N' THEN [wpt_y]+[val]&#xA;ELSEIF [inst] = 'S' THEN [wpt_y]-[val]&#xA;&#xA;ELSEIF [val] = 180 THEN -[wpt_y]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'R90'&#xA;OR [inst]+TOstring([val]) = 'L270' THEN -[wpt_x]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'L90'&#xA;OR [inst]+TOstring([val]) = 'R270' THEN [wpt_x]&#xA;&#xA;&#xA;ELSE [wpt_y]&#xA;ENDIF" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="186" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" size="3" source="TextInput:" type="String" />
+            <Field name="inst" size="1" source="TextInput:" type="String" />
+            <Field name="val" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="90" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Instructions</Name>
+          <Abbrev>I</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="7" />
+              <Fields>
+                <Field name="data" />
+                <Field name="inst" />
+                <Field name="val" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>R0</c>
+                  <c>R</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>F10</c>
+                  <c>F</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>N3</c>
+                  <c>N</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>F7</c>
+                  <c>F</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>R90</c>
+                  <c>R</c>
+                  <c>90</c>
+                </r>
+                <r>
+                  <c>F11</c>
+                  <c>F</c>
+                  <c>11</c>
+                </r>
+                <r>
+                  <c>W0</c>
+                  <c>W</c>
+                  <c>0</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Instructions</AnnotationText>
+          <DefaultAnnotationText>I Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" size="3" source="TextInput:" type="String" />
+            <Field name="inst" size="1" source="TextInput:" type="String" />
+            <Field name="val" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="306" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[RecordID] = [Engine.IterationNumber] +1</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[RecordID] = [Engine.IterationNumber] +1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" size="3" source="TextInput:" type="String" />
+            <Field name="inst" size="1" source="TextInput:" type="String" />
+            <Field name="val" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="data" size="3" source="TextInput:" type="String" />
+            <Field name="inst" size="1" source="TextInput:" type="String" />
+            <Field name="val" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="666" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Values</Name>
+          <Abbrev>V</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="wpt_x" />
+                <Field name="wpt_y" />
+                <Field name="pos_x" />
+                <Field name="pos_y" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Values at each step</AnnotationText>
+          <DefaultAnnotationText>V Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="wpt_x" source="TextInput:" type="Byte" />
+            <Field name="wpt_y" source="TextInput:" type="Byte" />
+            <Field name="pos_x" source="TextInput:" type="Byte" />
+            <Field name="pos_y" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="774" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.IterationNumber]+1" field="step" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[step = [Engine.IterationNumber]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="pos_x" source="Formula: IF [inst] = 'F' THEN [pos_x]+  ([wpt_x] * [val])&#xA;&#xA;ELSE [pos_x] ENDIF" type="Int64" />
+            <Field name="pos_y" source="Formula: IF [inst] = 'F' THEN [pos_y] +  ([wpt_y] * [val])&#xA;&#xA;ELSE [pos_y] ENDIF" type="Int64" />
+            <Field name="wpt_x" size="1073741823" source="Formula: IF [inst] = 'E' THEN [wpt_x]+[val]&#xA;ELSEIF [inst] = 'W' THEN [wpt_x]-[val]&#xA;&#xA;ELSEIF [val] = 180 THEN -[wpt_x]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'R90'&#xA;OR [inst]+TOstring([val]) = 'L270' THEN [wpt_y]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'L90'&#xA;OR [inst]+TOstring([val]) = 'R270' THEN -[wpt_y]&#xA;&#xA;ELSE [wpt_x]&#xA;ENDIF&#xA;" type="V_WString" />
+            <Field name="wpt_y" size="1073741823" source="Formula: IF [inst] = 'N' THEN [wpt_y]+[val]&#xA;ELSEIF [inst] = 'S' THEN [wpt_y]-[val]&#xA;&#xA;ELSEIF [val] = 180 THEN -[wpt_y]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'R90'&#xA;OR [inst]+TOstring([val]) = 'L270' THEN -[wpt_x]&#xA;&#xA;ELSEIF [inst]+TOstring([val]) = 'L90'&#xA;OR [inst]+TOstring([val]) = 'R270' THEN [wpt_x]&#xA;&#xA;&#xA;ELSE [wpt_y]&#xA;ENDIF" type="V_WString" />
+            <Field name="step" size="1073741823" source="Formula: [Engine.IterationNumber]+1" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="870" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>O Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="2" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="2" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (10)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (4)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (12)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC12_pgb</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (9)</Name>
+          <ToolId value="9" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (7)</Name>
+              <ToolId value="7" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (10)</Name>
+              <ToolId value="10" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (4)</Name>
+              <ToolId value="4" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (12)</Description>
+              <Name>Macro Output (12)</Name>
+              <ToolId value="12" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Values</Input>
+        <Output>next</Output>
+        <IterationLimit value="1000" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="4" Selected="True" />
+        <Tool ToolId="7" Selected="True" />
+        <Tool ToolId="10" Selected="True" />
+        <Tool ToolId="12" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

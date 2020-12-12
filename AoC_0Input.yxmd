@@ -1,0 +1,906 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings>
+        <Position x="66" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Numeric Up Down (5)">11</Value>
+          <Value name="Text Box (18)">53616c7465645f5f8d85560f395984520f3203a37f84b39f513f641035b52e93ea4ef60ba57841f2384fc58ca8673c99</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro=".\AdventOfCodeInput.yxmc" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="210" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_748_8a5d51a695974a96a06bb37ba0d67348_\Engine_36420_d23f2a79c3f646d88164c3a8ff5eaa7a_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="726" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="86" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>&lt;?xml version="1.0"?&gt;</c>
+            </r>
+            <r>
+              <c>&lt;AlteryxDocument yxmdVer="2020.4"&gt;</c>
+            </r>
+            <r>
+              <c><![CDATA[  <Nodes>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <Node ToolID="1">]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        <Position x="54" y="126" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      </GuiSettings>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <Properties>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        <Configuration>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <NumRows value="0" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <Fields>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[            <Field name="data" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          </Fields>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <Data />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        </Configuration>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        <Annotation DisplayMode="0">]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <Name />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <AnnotationText>TEST</AnnotationText>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <DefaultAnnotationText>TEST</DefaultAnnotationText>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <Left value="False" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        </Annotation>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      </Properties>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    </Node>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <Node ToolID="2">]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        <Position x="54" y="270" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      </GuiSettings>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <Properties>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        <Configuration>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <NumRows value="0" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <Fields>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[            <Field name="data" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          </Fields>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <Data />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        </Configuration>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        <Annotation DisplayMode="0">]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <Name />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <AnnotationText>FULL</AnnotationText>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <DefaultAnnotationText>FULL</DefaultAnnotationText>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[          <Left value="False" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        </Annotation>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      </Properties>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    </Node>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[  </Nodes>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[  <Connections />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[  <Properties>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <Memory default="True" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <GlobalRecordLimit value="0" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <TempFiles default="True" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <Annotation on="True" includeToolName="False" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <ConvErrorLimit value="10" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <ConvErrorLimit_Stop value="False" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <CancelOnError value="False" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <DisableBrowse value="False" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <EnablePerformanceProfiling value="False" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <DisableAllOutput value="False" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <ShowAllMacroMessages value="False" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <ShowConnectionStatusIsOn value="True" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <ShowConnectionStatusOnlyWhenRunning value="False" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <ZoomLevel value="0" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <LayoutType>Horizontal</LayoutType>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <MetaInfo>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <NameIsFileName value="True" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <Name>AoCxx_pgb</Name>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <Description />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <RootToolName />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <ToolVersion />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <ToolInDb value="False" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <CategoryName />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <SearchTags />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <Author />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <Company />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <Copyright />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <DescriptionLink actual="" displayed="" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <Example>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        <Description />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[        <File />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      </Example>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    </MetaInfo>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    <Events>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[      <Enabled value="True" />]]></c>
+            </r>
+            <r>
+              <c><![CDATA[    </Events>]]></c>
+            </r>
+            <r>
+              <c><![CDATA[  </Properties>]]></c>
+            </r>
+            <r>
+              <c>&lt;/AlteryxDocument&gt;</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1026" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_748_8a5d51a695974a96a06bb37ba0d67348_\Engine_36420_a164c6bc2f9e4e93b057d378a30d19b1_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="78" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="x" />
+          </Fields>
+          <Data>
+            <r>
+              <c>x</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="174" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'53616c7465645f5f8d85560f395984520f3203a37f84b39f513f641035b52e93ea4ef60ba57841f2384fc58ca8673c99'" field="cookie" size="1073741823" type="V_WString" />
+            <FormulaField expression="'https://adventofcode.com/2020/day/'&#xA;+Tostring(DateTimeDay(DateTimeToday()))&#xA;+'/input'" field="URL" size="1073741823" type="V_WString" />
+            <FormulaField expression="'session='+[cookie]" field="cookie" size="1073741823" type="V_WString" />
+            <FormulaField expression="'AoC'+Tostring(DateTimeDay(DateTimeToday()))+'_pgb.yxmd'" field="filename" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>cookie = '53616c7465645f5f8d85560f395984520f3203a37f84b39f513f641035b52e93ea4ef6...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="678" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_748_8a5d51a695974a96a06bb37ba0d67348_\Engine_36420_c4951d63d7f4450abc1d5f6e9de6e9eb_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxConnectorGui.Download.Download">
+        <Position x="294" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <URLField>URL</URLField>
+          <OutputMode>String</OutputMode>
+          <CodePage>65001</CodePage>
+          <EncodeURLs value="False" />
+          <Headers>
+            <NameValues />
+            <Fields orderChanged="False">
+              <Field name="cookie" />
+              <Field name="x" selected="False" />
+              <Field name="URL" selected="False" />
+              <Field name="*Unknown" selected="False" />
+            </Fields>
+          </Headers>
+          <Payload>
+            <HTTPAction>GET</HTTPAction>
+            <QueryStringBodyMode>Compose</QueryStringBodyMode>
+            <ComposeNameValues />
+            <ComposeFields orderChanged="False">
+              <Field name="x" selected="False" />
+              <Field name="cookie" selected="False" />
+              <Field name="URL" selected="False" />
+              <Field name="*Unknown" selected="False" />
+            </ComposeFields>
+          </Payload>
+          <UserName />
+          <Password />
+          <numConnections>2</numConnections>
+          <Timeout>600</Timeout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxConnectorEngine.dll" EngineDllEntryPoint="AlteryxDownload" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="390" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>DownloadData</Field>
+          <Delimeters value="\n" />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="486" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="DownloadData" selected="True" rename="data" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="582" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'&lt;r&gt;&#xA;&lt;c&gt;'+[data]+'&lt;/c&gt;&#xA;&lt;/r&gt;'" field="data" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[data = '<r>
+<c>'+[data]+'</c>
+</r>'
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings>
+        <Position x="870" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">1-34</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings>
+        <Position x="894" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">36+</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1098" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_748_8a5d51a695974a96a06bb37ba0d67348_\Engine_36420_d96f2349e72b4c64b88413c6b35db02b_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1086" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="True" />
+          <OutputOrder>
+            <Connection>#1</Connection>
+            <Connection>#2</Connection>
+            <Connection>#3</Connection>
+            <Connection>#4</Connection>
+          </OutputOrder>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="738" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>&lt;Data&gt;</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1266" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_748_8a5d51a695974a96a06bb37ba0d67348_\Engine_36420_222d6cb1c2ba41a0a4c52cabb0d37e59_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1302" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">test.yxmd</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>\n</Delimeter>
+            <ForceQuotes>Never</ForceQuotes>
+            <HeaderRow>False</HeaderRow>
+            <CodePage>65001</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="True" />
+          <MultiFileType>Path</MultiFileType>
+          <MultiFileField>filename</MultiFileField>
+          <KeepField value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>test.yxmd</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1206" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_data" selected="True" input="Target_" />
+                <SelectField field="Source_filename" selected="True" input="Source_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="714" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <Delimeters value="\n" />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="798" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>&lt;/Data&gt;</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="21" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="21" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC_Input</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
