@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="10">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1110" y="78" />
+        <Position x="1182" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -34,7 +34,7 @@
     </Node>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="78" y="78" />
+        <Position x="54" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -73,7 +73,7 @@
     </Node>
     <Node ToolID="2">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="522" y="78" />
+        <Position x="498" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -92,7 +92,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1482" y="66" />
+        <Position x="1530" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -120,7 +120,7 @@
     </Node>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-        <Position x="270" y="78" />
+        <Position x="246" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -140,7 +140,7 @@
     </Node>
     <Node ToolID="5">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
-        <Position x="618" y="78" />
+        <Position x="606" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -164,7 +164,8 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>One row per item</AnnotationText>
+          <DefaultAnnotationText>One row per item</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -172,7 +173,7 @@
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="714" y="78" />
+        <Position x="738" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -190,6 +191,7 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
+          <AnnotationText>Item ID within each Rucksack</AnnotationText>
           <DefaultAnnotationText>[Row-1:ItemID]+1</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
@@ -198,7 +200,7 @@
     </Node>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="798" y="78" />
+        <Position x="846" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -209,12 +211,14 @@
             <SelectField field="ItemID" selected="True" />
             <SelectField field="Rucksacks" selected="True" rename="Item" />
             <SelectField field="Compartment Size" selected="True" />
+            <SelectField field="GroupID" selected="True" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Rename</AnnotationText>
+          <DefaultAnnotationText>Rename</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -222,7 +226,7 @@
     </Node>
     <Node ToolID="8">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="894" y="78" />
+        <Position x="942" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -232,6 +236,7 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
+          <AnnotationText>Determine compartment based on half of length vs item ID</AnnotationText>
           <DefaultAnnotationText><![CDATA[Compartment = IF [ItemID] <= [Compartment Size]
 THEN 1 ELSE 2 ENDIF
 ]]></DefaultAnnotationText>
@@ -242,7 +247,7 @@ THEN 1 ELSE 2 ENDIF
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1026" y="78" />
+        <Position x="1074" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -254,7 +259,8 @@ THEN 1 ELSE 2 ENDIF
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>CountD of compartments per item per rucksack</AnnotationText>
+          <DefaultAnnotationText>CountD of compartments per item per rucksack</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -262,7 +268,7 @@ THEN 1 ELSE 2 ENDIF
     </Node>
     <Node ToolID="11">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1254" y="66" />
+        <Position x="1314" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -284,7 +290,7 @@ Priority = If [Priority] &lt; 0 THEN
     </Node>
     <Node ToolID="14">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1386" y="66" />
+        <Position x="1434" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -294,7 +300,8 @@ Priority = If [Priority] &lt; 0 THEN
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Sum Priority</AnnotationText>
+          <DefaultAnnotationText>Sum Priority</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -302,7 +309,7 @@ Priority = If [Priority] &lt; 0 THEN
     </Node>
     <Node ToolID="15">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="78" y="210" />
+        <Position x="54" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -326,9 +333,6 @@ Priority = If [Priority] &lt; 0 THEN
           <DefaultAnnotationText>AoC_3.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Field_1" size="254" source="File: C:\Users\peter\OneDrive\Desktop\AoC_3.csv" type="V_WString" />
@@ -339,7 +343,7 @@ Priority = If [Priority] &lt; 0 THEN
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="186" y="210" />
+        <Position x="162" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -360,7 +364,7 @@ Priority = If [Priority] &lt; 0 THEN
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="390" y="78" />
+        <Position x="366" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -370,6 +374,9 @@ Priority = If [Priority] &lt; 0 THEN
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
+          <AnnotationText>GroupID = CEIL([RucksackID]/3)
+
+Group ID for part 2</AnnotationText>
           <DefaultAnnotationText><![CDATA[GroupID = CEIL([RucksackID]/3)
 ]]></DefaultAnnotationText>
           <Left value="False" />
@@ -379,7 +386,7 @@ Priority = If [Priority] &lt; 0 THEN
     </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1026" y="282" />
+        <Position x="1074" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -391,7 +398,8 @@ Priority = If [Priority] &lt; 0 THEN
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>CountD of rucksacks per item per Group</AnnotationText>
+          <DefaultAnnotationText>CountD of rucksacks per item per Group</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -399,7 +407,7 @@ Priority = If [Priority] &lt; 0 THEN
     </Node>
     <Node ToolID="19">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1110" y="282" />
+        <Position x="1182" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -414,9 +422,9 @@ Priority = If [Priority] &lt; 0 THEN
               <PeriodType>
               </PeriodType>
               <PeriodCount>0</PeriodCount>
+              <Operand>3</Operand>
               <StartDate>2022-12-03 16:29:59</StartDate>
               <EndDate>2022-12-03 16:29:59</EndDate>
-              <Operand>3</Operand>
             </Operands>
           </Simple>
         </Configuration>
@@ -430,7 +438,7 @@ Priority = If [Priority] &lt; 0 THEN
     </Node>
     <Node ToolID="22">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1494" y="270" />
+        <Position x="1542" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -458,7 +466,7 @@ Priority = If [Priority] &lt; 0 THEN
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1266" y="270" />
+        <Position x="1314" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -480,7 +488,7 @@ Priority = If [Priority] &lt; 0 THEN
     </Node>
     <Node ToolID="24">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1398" y="270" />
+        <Position x="1434" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -490,7 +498,8 @@ Priority = If [Priority] &lt; 0 THEN
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Sum Priority</AnnotationText>
+          <DefaultAnnotationText>Sum Priority</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>

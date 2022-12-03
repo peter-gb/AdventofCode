@@ -6792,6 +6792,7 @@ ELSE [Row-1:ElfID] ENDIF</Expression>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
+          <AnnotationText>Create ElfID</AnnotationText>
           <DefaultAnnotationText>IF ISNULL([Calories]) 
 THEN [Row-1:ElfID]+1
 ELSE [Row-1:ElfID...</DefaultAnnotationText>
@@ -6806,7 +6807,7 @@ ELSE [Row-1:ElfID...</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_19436_3fbb658cd16ee845b2e0c4d96cc2c8ce_\Engine_19436_0c0ab8d1e8e95943b86a5db48152ac6f~.yxdb</TempFile>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_8664_3e53ecc1e86b8c49a7aa2ba995391214_\Engine_8664_14118ced464e1242b7cd7afb22578c19~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -6873,7 +6874,8 @@ ELSE [Row-1:ElfID...</DefaultAnnotationText>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Sum Cals</AnnotationText>
+          <DefaultAnnotationText><![CDATA[Count Calories]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -6939,7 +6941,7 @@ ELSE [Row-1:ElfID...</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_19436_3fbb658cd16ee845b2e0c4d96cc2c8ce_\Engine_19436_08c9b02ea152184c87a142443e566e7d~.yxdb</TempFile>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_8664_3e53ecc1e86b8c49a7aa2ba995391214_\Engine_8664_89fe6a0bafe4af4198005941532e6cb8~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -6973,7 +6975,8 @@ ELSE [Row-1:ElfID...</DefaultAnnotationText>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Sum Cals</AnnotationText>
+          <DefaultAnnotationText>Sum Cals</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>

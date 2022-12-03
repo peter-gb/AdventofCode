@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="90" y="102" />
+        <Position x="54" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -35,7 +35,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-        <Position x="210" y="102" />
+        <Position x="174" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -48,7 +48,8 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Split opponent and response cols</AnnotationText>
+          <DefaultAnnotationText>Split opponent and response cols</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -56,7 +57,7 @@
     </Node>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="378" y="102" />
+        <Position x="318" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -71,7 +72,8 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Rename</AnnotationText>
+          <DefaultAnnotationText>Rename</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -79,7 +81,7 @@
     </Node>
     <Node ToolID="5">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="894" y="234" />
+        <Position x="930" y="210" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -114,7 +116,7 @@
     </Node>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="426" y="198" />
+        <Position x="390" y="150" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -153,7 +155,7 @@
     </Node>
     <Node ToolID="8">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="990" y="162" />
+        <Position x="1038" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -171,7 +173,8 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Turn choice score</AnnotationText>
+          <DefaultAnnotationText>Turn choice score</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -179,7 +182,7 @@
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="510" y="114" />
+        <Position x="474" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -203,7 +206,7 @@
     </Node>
     <Node ToolID="10">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="618" y="126" />
+        <Position x="582" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -221,7 +224,8 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Legible rock paper scissors instead of A-Z encoding</AnnotationText>
+          <DefaultAnnotationText>Legible rock paper scissors instead of A-Z encoding</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -229,7 +233,7 @@
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="90" y="210" />
+        <Position x="54" y="162" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -253,15 +257,17 @@
           <DefaultAnnotationText>AoC_2.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="254" source="File: C:\Users\peter\Documents\GitHub\AdventofCode\AoC 2022\AoC_2.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="426" y="498" />
+        <Position x="438" y="498" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -304,7 +310,7 @@
     </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
-        <Position x="522" y="498" />
+        <Position x="534" y="498" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -330,7 +336,7 @@
     </Node>
     <Node ToolID="20">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="630" y="498" />
+        <Position x="642" y="498" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -353,7 +359,7 @@
     </Node>
     <Node ToolID="21">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="786" y="150" />
+        <Position x="774" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -379,7 +385,8 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Join Game result score</AnnotationText>
+          <DefaultAnnotationText>Join Game result score</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -387,7 +394,7 @@
     </Node>
     <Node ToolID="22">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1314" y="162" />
+        <Position x="1386" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -415,7 +422,7 @@
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1086" y="162" />
+        <Position x="1158" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -434,7 +441,7 @@
     </Node>
     <Node ToolID="24">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1206" y="162" />
+        <Position x="1278" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -452,7 +459,7 @@
     </Node>
     <Node ToolID="29">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="834" y="330" />
+        <Position x="678" y="282" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -478,7 +485,7 @@
     </Node>
     <Node ToolID="30">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="966" y="342" />
+        <Position x="774" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -504,7 +511,8 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Join Game result score</AnnotationText>
+          <DefaultAnnotationText>Join Game result score</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -512,7 +520,7 @@
     </Node>
     <Node ToolID="31">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1422" y="354" />
+        <Position x="1386" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -540,7 +548,7 @@
     </Node>
     <Node ToolID="32">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1194" y="354" />
+        <Position x="1158" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -559,7 +567,7 @@
     </Node>
     <Node ToolID="33">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1314" y="354" />
+        <Position x="1278" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -577,7 +585,7 @@
     </Node>
     <Node ToolID="34">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="738" y="402" />
+        <Position x="582" y="354" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -612,7 +620,7 @@
     </Node>
     <Node ToolID="37">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="738" y="318" />
+        <Position x="582" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -633,7 +641,7 @@
     </Node>
     <Node ToolID="38">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="1086" y="354" />
+        <Position x="1038" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -651,7 +659,8 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <AnnotationText>Turn choice score</AnnotationText>
+          <DefaultAnnotationText>Turn choice score</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
