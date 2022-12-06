@@ -15,7 +15,7 @@
           <Data>
             <r>
               <c>2</c>
-              <c>53616c7465645f5f4b57575cdb9ac72b3ab95f7ec5f284d886068078273a96b93209141a69034573535cf088a8f76a5687bcd27d7a5ca079824d6d32e224daf5</c>
+              <c />
             </r>
           </Data>
         </Configuration>
@@ -27,7 +27,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="day" source="TextInput:" type="Byte" />
-            <Field name="Session ID" size="128" source="TextInput:" type="String" />
+            <Field name="Session ID" source="TextInput:" type="Bool" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -41,7 +41,7 @@
         <Configuration>
           <FormulaFields>
             <FormulaField expression="&quot;https://adventofcode.com/2022/day/&quot;+ToString([day])+&quot;/input&quot;" field="url" size="1073741823" type="V_WString" />
-            <FormulaField expression="'session='+IIF(IsNull([#1]), [#1], [Session ID])" field="cookie" size="1000" type="String" />
+            <FormulaField expression="'session='+[#1]" field="cookie" size="1000" type="String" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="2">
@@ -53,9 +53,9 @@ cookie = 'se...</DefaultAnnotationText>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="day" source="TextInput:" type="Int16" />
-            <Field name="Session ID" size="128" source="TextInput:" type="String" />
+            <Field name="Session ID" source="TextInput:" type="Bool" />
             <Field name="url" size="1073741823" source="Formula: &quot;https://adventofcode.com/2022/day/&quot;+ToString([day])+&quot;/input&quot;" type="V_WString" />
-            <Field name="cookie" size="1000" source="Formula: 'session='+IIF(IsNull([#1]), [#1], [Session ID])" type="String" />
+            <Field name="cookie" size="1000" source="Formula: 'session='+[#1]" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -134,7 +134,7 @@ cookie = 'se...</DefaultAnnotationText>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="day" source="TextInput:" type="Int16" />
-            <Field name="Session ID" size="128" source="TextInput:" type="String" />
+            <Field name="Session ID" source="TextInput:" type="Bool" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -163,9 +163,6 @@ cookie = 'se...</DefaultAnnotationText>
           <DefaultAnnotationText>AoC_X.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -262,7 +259,7 @@ cookie = 'se...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="25400000" source="File: C:\Users\peter\OneDrive\Desktop\AoC Starter App\AoC_X.yxmd" type="V_WString" />
+            <Field name="Field_1" size="25400000" source="File: C:\Users\peter\Documents\GitHub\AdventofCode\AoC Starter App\AoC_X.yxmd" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -319,7 +316,7 @@ cookie = 'se...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="25400000" source="File: C:\Users\peter\OneDrive\Desktop\AoC Starter App\AoC_X.yxmd" type="V_WString" />
+            <Field name="Field_1" size="25400000" source="File: C:\Users\peter\Documents\GitHub\AdventofCode\AoC Starter App\AoC_X.yxmd" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -348,9 +345,6 @@ cookie = 'se...</DefaultAnnotationText>
           <DefaultAnnotationText>AoC_X.yxmd</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -468,9 +462,9 @@ cookie = 'se...</DefaultAnnotationText>
             <MetaInfo connection="Output">
               <RecordInfo>
                 <Field name="day" source="TextInput:" type="Int16" />
-                <Field name="Session ID" size="128" source="TextInput:" type="String" />
+                <Field name="Session ID" source="TextInput:" type="Bool" />
                 <Field name="url" size="1073741823" source="Formula: &quot;https://adventofcode.com/2022/day/&quot;+ToString([day])+&quot;/input&quot;" type="V_WString" />
-                <Field name="cookie" size="1000" source="Formula: 'session='+IIF(IsNull([#1]), [#1], [Session ID])" type="String" />
+                <Field name="cookie" size="1000" source="Formula: 'session='+[#1]" type="String" />
                 <Field name="DownloadData" size="1073741823" source="Download" type="V_WString" />
                 <Field name="DownloadHeaders" size="2147483647" source="Download" type="V_String" />
               </RecordInfo>
@@ -499,9 +493,9 @@ cookie = 'se...</DefaultAnnotationText>
             <MetaInfo connection="Output">
               <RecordInfo>
                 <Field name="day" source="TextInput:" type="Int16" />
-                <Field name="Session ID" size="128" source="TextInput:" type="String" />
+                <Field name="Session ID" source="TextInput:" type="Bool" />
                 <Field name="url" size="1073741823" source="Formula: &quot;https://adventofcode.com/2022/day/&quot;+ToString([day])+&quot;/input&quot;" type="V_WString" />
-                <Field name="cookie" size="1000" source="Formula: 'session='+IIF(IsNull([#1]), [#1], [Session ID])" type="String" />
+                <Field name="cookie" size="1000" source="Formula: 'session='+[#1]" type="String" />
                 <Field name="DownloadData" size="1073741823" source="Download" type="V_WString" />
                 <Field name="DownloadHeaders" size="2147483647" source="Download" type="V_String" />
               </RecordInfo>

@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="44">
+      <GuiSettings>
+        <Position x="642" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="BatchMacroGroupBy" />
+          <Value name="ControlParams"><![CDATA[Control Parameter (70)=From
+Control Parameter (71)=To
+Control Parameter (73)=Move
+]]></Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>AoC_5_CrateStacker (24)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output2">
+          <RecordInfo>
+            <Field name="F1" size="1073741823" source="Formula: TrimRight([FROM],[Move])" type="V_WString" />
+            <Field name="F2" size="1073741823" source="Formula: [TO] + ReverseString([Move])" type="V_WString" />
+            <Field name="F3" size="16384" source="TextInput:" type="V_String" />
+            <Field name="F4" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F5" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F6" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F7" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F8" source="TextInput:" type="Bool" />
+            <Field name="F9" source="TextInput:" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="AoC_5_CrateStacker.yxmc" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="390" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[RecordID] = [Engine.IterationNumber]+1</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[RecordID] = [Engine.IterationNumber]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Field_1" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="From" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="To" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Field_1" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="From" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="To" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1122" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="798" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Cratesnext</Name>
+          <Abbrev>N</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="798" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.IterationNumber]" field="Iteration" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Iteration = [Engine.IterationNumber]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="F1" size="1073741823" source="Formula: TrimRight([FROM],[Move])" type="V_WString" />
+            <Field name="F2" size="1073741823" source="Formula: [TO] + ReverseString([Move])" type="V_WString" />
+            <Field name="F3" size="16384" source="TextInput:" type="V_String" />
+            <Field name="F4" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F5" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F6" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F7" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F8" source="TextInput:" type="Bool" />
+            <Field name="F9" source="TextInput:" type="Bool" />
+            <Field name="Iteration" size="1073741823" source="Formula: [Engine.IterationNumber]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="270" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Instructions</Name>
+          <Abbrev>I</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="4" />
+              <Fields>
+                <Field name="RecordID" />
+                <Field name="Field_1" />
+                <Field name="Move" />
+                <Field name="From" />
+                <Field name="To" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                  <c>move 1 from 2 to 1</c>
+                  <c>1</c>
+                  <c>F2</c>
+                  <c>F1</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>move 3 from 1 to 3</c>
+                  <c>3</c>
+                  <c>F1</c>
+                  <c>F3</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>move 2 from 2 to 1</c>
+                  <c>2</c>
+                  <c>F2</c>
+                  <c>F1</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>move 1 from 1 to 2</c>
+                  <c>1</c>
+                  <c>F1</c>
+                  <c>F2</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Field_1" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="From" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="To" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="966" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_Iteration" selected="True" input="Target_" />
+                <SelectField field="Source_Field_1" selected="True" rename="Instruction" input="Source_" />
+                <SelectField field="Target_F1" selected="True" input="Target_" />
+                <SelectField field="Target_F2" selected="True" input="Target_" />
+                <SelectField field="Target_F3" selected="True" input="Target_" />
+                <SelectField field="Source_RecordID" selected="False" input="Source_" />
+                <SelectField field="Source_Move" selected="False" input="Source_" />
+                <SelectField field="Source_From" selected="False" input="Source_" />
+                <SelectField field="Source_To" selected="False" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Iteration" size="1073741823" source="Formula: [Engine.IterationNumber]" type="V_WString" />
+            <Field name="Instruction" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F1" size="1073741823" source="Formula: TrimRight([FROM],[Move])" type="V_WString" />
+            <Field name="F2" size="1073741823" source="Formula: [TO] + ReverseString([Move])" type="V_WString" />
+            <Field name="F3" size="16384" source="TextInput:" type="V_String" />
+            <Field name="F4" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F5" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F6" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F7" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F8" source="TextInput:" type="Bool" />
+            <Field name="F9" source="TextInput:" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="282" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Crates</Name>
+          <Abbrev>C</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="F1" />
+                <Field name="F2" />
+                <Field name="F3" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>ZN</c>
+                  <c>MCD</c>
+                  <c>P</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="F1" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F2" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="F3" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="44" Connection="Output2" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output2" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="True" />
+      <Destination ToolID="44" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="44" Connection="Input1" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="True" />
+      <Destination ToolID="35" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="35" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (33)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (34)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC_5_Iterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="890ff0d1-ac4c-4baa-ad90-8bc99acb0e37" />
+      <Telemetry>
+        <PreviousWorkflowId value="ce005553-0048-412e-84be-7516056e0290" />
+        <OriginWorkflowId value="7c7e5a10-7fb2-4668-b53c-a7c56258b924" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (29)</Name>
+          <ToolId value="29" />
+          <Questions>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (30)</Description>
+              <Name>Macro Output (30)</Name>
+              <ToolId value="30" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (30)</Description>
+              <Name>Macro Output (31)</Name>
+              <ToolId value="31" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (33)</Description>
+              <Name>Macro Input (33)</Name>
+              <ToolId value="33" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (34)</Description>
+              <Name>Macro Input (34)</Name>
+              <ToolId value="34" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="34" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Crates</Input>
+        <Output>Cratesnext</Output>
+        <IterationLimit value="600" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AutoByName</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="44" Selected="True" />
+        <Tool ToolId="30" Selected="True" />
+        <Tool ToolId="31" Selected="True" />
+        <Tool ToolId="33" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
