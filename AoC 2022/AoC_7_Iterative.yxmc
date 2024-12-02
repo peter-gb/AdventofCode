@@ -1,0 +1,2226 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="414" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Levels] = [Engine.IterationNumber]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Levels] = [Engine.IterationNumber]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Path" size="56" source="TextInput:" type="V_String" />
+            <Field name="Size" source="TextInput:" type="Int32" />
+            <Field name="NumFolders" source="TextInput:" type="Byte" />
+            <Field name="Levels" source="TextInput:" type="Byte" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Path" size="56" source="TextInput:" type="V_String" />
+            <Field name="Size" source="TextInput:" type="Int32" />
+            <Field name="NumFolders" source="TextInput:" type="Byte" />
+            <Field name="Levels" source="TextInput:" type="Byte" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="690" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_40076_02ccdd0cb403497aa7d6a2d355ed7412_\Engine_23376_0db9bcc6259c40f38fe3e38c443a0f6c_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Known size</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="76">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1434" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_40076_02ccdd0cb403497aa7d6a2d355ed7412_\Engine_23376_bea1ea2f2d634ac2be0aa0e87739f587_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="78">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="582" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="NumFolders" selected="False" />
+            <SelectField field="Levels" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="56" source="TextInput:" type="V_String" />
+            <Field name="Size" source="TextInput:" type="Int32" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="79">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="690" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="REGEX_Replace([Path],'(.*)_.+?$', '$1')" field="Parent Folder" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Parent Folder = REGEX_Replace([Path],'(.*)_.+?$', '$1')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="56" source="TextInput:" type="V_String" />
+            <Field name="Size" source="TextInput:" type="Int32" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+            <Field name="Parent Folder" size="1073741823" source="Formula: REGEX_Replace([Path],'(.*)_.+?$', '$1')" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="80">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="822" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Path" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Parent Folder" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Path" selected="False" rename="Right_Path" input="Right_" />
+                <SelectField field="Right_Size" selected="True" rename="Right_Size" input="Right_" />
+                <SelectField field="Right_Max_Levels" selected="True" rename="Right_Max_Levels" input="Right_" />
+                <SelectField field="Right_Parent Folder" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Path" size="56" source="TextInput:" type="V_String" />
+            <Field name="Size" source="TextInput:" type="Int32" />
+            <Field name="NumFolders" source="TextInput:" type="Byte" />
+            <Field name="Levels" source="TextInput:" type="Byte" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Path" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Path" size="56" source="TextInput:" type="V_String" />
+            <Field name="Size" source="TextInput:" type="Int32" />
+            <Field name="NumFolders" source="TextInput:" type="Byte" />
+            <Field name="Levels" source="TextInput:" type="Byte" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+            <Field name="Right_Size" source="TextInput:" type="Int32" />
+            <Field name="Right_Max_Levels" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Path" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Path" size="56" source="TextInput:" type="V_String" />
+            <Field name="Size" source="TextInput:" type="Int32" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+            <Field name="Parent Folder" size="1073741823" source="Formula: REGEX_Replace([Path],'(.*)_.+?$', '$1')" type="V_WString" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Parent Folder" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1026" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Avg_Size]+[Sum_Right_Size]" field="Size" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Size = [Avg_Size]+[Sum_Right_Size]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="56" source="Summarize: GroupBy - Path" type="V_String" />
+            <Field name="Avg_Size" source="Summarize: Avg - Size" type="Double" />
+            <Field name="Sum_Right_Size" source="Summarize: Sum - Right_Size" type="Int64" />
+            <Field name="Size" source="Formula: [Avg_Size]+[Sum_Right_Size]" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Path" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="83">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="930" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Path" action="GroupBy" rename="Path" />
+            <SummarizeField field="Size" action="Avg" rename="Avg_Size" />
+            <SummarizeField field="Right_Size" action="Sum" rename="Sum_Right_Size" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="56" source="Summarize: GroupBy - Path" type="V_String" />
+            <Field name="Avg_Size" source="Summarize: Avg - Size" type="Double" />
+            <Field name="Sum_Right_Size" source="Summarize: Sum - Right_Size" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Path" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="89">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1206" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="56" source="(Multiple Sources)" type="V_String" />
+            <Field name="Size" source="(Multiple Sources)" type="Int64" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="90">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1122" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Path" selected="True" />
+            <SelectField field="Size" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="56" source="Summarize: GroupBy - Path" type="V_String" />
+            <Field name="Size" source="Formula: [Avg_Size]+[Sum_Right_Size]" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Path" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="91">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="92">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="150" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input66</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="191" />
+              <Fields>
+                <Field name="Path" />
+                <Field name="Size" />
+                <Field name="NumFolders" />
+                <Field name="Levels" />
+                <Field name="Max_Levels" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_hvwjc_wnj_dvlb_cwjbzd_tlhttrgs</c>
+                  <c>240264</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_fnwsmj_lfrctthp_sgddcfdn_lnjln</c>
+                  <c>28970</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_zhj_nqv_tlhttrgs_cqtnvzn</c>
+                  <c>49609</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_qlrn_wbgvqpc_qfhvjtv_mhbbpdpj_ghrbbh</c>
+                  <c>24686</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd_lfrctthp_fqswn_dhgghnm_sppmmj_dsss</c>
+                  <c>201519</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_tlhttrgs_cgf_dvlb</c>
+                  <c>77864</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_hvwjc_wnj_dvlb_cwjbzd</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_fnwsmj_lfrctthp_qdgqdtn</c>
+                  <c>230357</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_fnwsmj_rddpmj_fhlnmw</c>
+                  <c>228871</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_zhj_hww_pnsbrd</c>
+                  <c>234873</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_zhj_nqv_rjgbm</c>
+                  <c>392780</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_ghzsqrn_fngzpjm_dvlb</c>
+                  <c>502558</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_ghzsqrn_fngzpjm_ghzwdw</c>
+                  <c>231626</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_lfrctthp_thgh_nrntbh</c>
+                  <c>139964</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_lfrctthp_thgh_qlhbf</c>
+                  <c>115891</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd_lfrctthp_fqswn_vpbwj_tlhttrgs</c>
+                  <c>145100</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_llcflrds_cngdgq</c>
+                  <c>235724</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_tlhttrgs_cwjbzd</c>
+                  <c>225586</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_tlhttrgs_jvs</c>
+                  <c>142337</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_tlhttrgs_ppsmqwn</c>
+                  <c>147277</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_tlhttrgs_qqmtj</c>
+                  <c>153442</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_tlhttrgs_qzmpwzvz</c>
+                  <c>478036</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_tlhttrgs_zmsbqrqf</c>
+                  <c>193665</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lrtsts_drtrdnsg_sppmmj_mdmh_zvtjfz</c>
+                  <c>142470</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_njfmmj_sppmmj_qzvwhr_cwjbzd</c>
+                  <c>262825</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_tlhttrgs_tlhttrgs_sbhswjld_sppmmj</c>
+                  <c>88100</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_fnwsmj_lfrctthp_sgddcfdn</c>
+                  <c>317762</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_zhj_nqv_tlhttrgs</c>
+                  <c>220458</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_qlrn_wbgvqpc_qfhvjtv_mhbbpdpj</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_hvwjc_wnj_dvlb</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd_lfrctthp_fqswn_dhgghnm_sppmmj</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_tlhttrgs_cgf</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_bjfqsb_jgltcw</c>
+                  <c>264579</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_wlhfvwl_rbwq</c>
+                  <c>205483</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_qlrn_wbgvqpc_dvlb</c>
+                  <c>118388</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_qlrn_wbgvqpc_tpcwhmv</c>
+                  <c>3666</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_vpltwcs_tlhttrgs_cchd</c>
+                  <c>126044</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_rbtbtt_wqmvzg_lzbj_tnhdmqjh</c>
+                  <c>5150</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_ghzsqrn_mdqbvhrr</c>
+                  <c>32598</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_ghzsqrn_sfhqmzhd</c>
+                  <c>58893</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_hvwjc_nchvqtdq</c>
+                  <c>49931</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_lfrctthp_zzffz</c>
+                  <c>170513</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_dnqvhtr_jzm_smtpdcpf</c>
+                  <c>95947</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_dnqvhtr_sppmmj_hmcn</c>
+                  <c>421449</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_dnqvhtr_sppmmj_mrhsrrm</c>
+                  <c>126589</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_dnqvhtr_sppmmj_nlqmghj</c>
+                  <c>113621</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_dnqvhtr_sppmmj_rqbtcvfw</c>
+                  <c>259673</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_jvvsgbl_tlhttrgs_dvlb</c>
+                  <c>62683</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_jvvsgbl_tlhttrgs_hjclnb</c>
+                  <c>412610</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_mpb_dvlb_prqfqf_ltmjppj</c>
+                  <c>241963</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_wtcttdzg</c>
+                  <c>162986</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_vzh_ccbjg_mcvsbd_cwjbzd</c>
+                  <c>224826</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_vzh_ccbjg_mcvsbd_rbsv</c>
+                  <c>164816</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_zzvnq_lznpqbrd_lfrctthp_sppmmj</c>
+                  <c>246742</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lrtsts_drtrdnsg_sppmmj_nbzh</c>
+                  <c>368372</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lrtsts_drtrdnsg_sppmmj_wwhbgg</c>
+                  <c>51752</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_njfmmj_gjgftj_mjbw</c>
+                  <c>243595</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_tlhttrgs_tlhttrgs_qtws</c>
+                  <c>102462</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_fnwsmj_rddpmj</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_zhj_hww</c>
+                  <c>646988</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_qlrn_wbgvqpc_qfhvjtv</c>
+                  <c>222200</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_hvwjc_wnj</c>
+                  <c>411323</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd_lfrctthp_fqswn_dhgghnm</c>
+                  <c>36757</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd_lfrctthp_fqswn_vpbwj</c>
+                  <c>425708</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_llcflrds</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lrtsts_drtrdnsg_sppmmj_mdmh</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_njfmmj_sppmmj_qzvwhr</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_tlhttrgs_tlhttrgs_sbhswjld</c>
+                  <c>243763</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_fnwsmj_lfrctthp</c>
+                  <c>198919</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_zhj_nqv</c>
+                  <c>858621</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_ghzsqrn_fngzpjm</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_lfrctthp_thgh</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd_tlhttrgs</c>
+                  <c>186894</c>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_lfrctthp_srf_rwvdvvsf</c>
+                  <c>153197</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_lfrctthp_srf_wvhhr</c>
+                  <c>10445</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_wrgqqts</c>
+                  <c>124869</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_qlrn_jwgd</c>
+                  <c>57414</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_dvlb</c>
+                  <c>237944</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd_dfqpqqw_rjm</c>
+                  <c>25830</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd_sppmmj_sppmmj</c>
+                  <c>161387</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_dnqvhtr_phcfgqfs</c>
+                  <c>257801</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_dnqvhtr_vhrst</c>
+                  <c>102273</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_jvvsgbl_fbvls</c>
+                  <c>146823</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_jvvsgbl_gtwrhhd</c>
+                  <c>59762</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_ndn_hfq_bsjgglbs</c>
+                  <c>121761</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_jdsbt</c>
+                  <c>676993</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_vzh_ccbjg_sppmmj</c>
+                  <c>471833</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_zzvnq_lznpqbrd_dvlb</c>
+                  <c>41223</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_zzvnq_pddfg_cwjbzd</c>
+                  <c>197956</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_zzvnq_pddfg_jbw</c>
+                  <c>247206</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_zzvnq_pvdz_jctpqbgw</c>
+                  <c>190424</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_jqcms_cwjbzd_mwvlhzdn</c>
+                  <c>272658</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_jqcms_cwjbzd_qrpllg</c>
+                  <c>215810</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lrtsts_drtrdnsg_gnc</c>
+                  <c>385094</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_njfmmj_bjsvdfrf</c>
+                  <c>77668</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_sppmmj_rdd</c>
+                  <c>20045</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_sppmmj_tlhttrgs</c>
+                  <c>47256</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_sppmmj_zbq</c>
+                  <c>223951</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_tlhttrgs_mjcmhg</c>
+                  <c>214188</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_qpzqp_ddclns_vprlq</c>
+                  <c>137784</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_scwnmrds_sppmmj_sppmmj</c>
+                  <c>73173</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_vhj_jnm_sppmmj_lfrctthp</c>
+                  <c>370059</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_bjfqsb</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_wlhfvwl</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_vpltwcs_tlhttrgs</c>
+                  <c>337963</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_rbtbtt_wqmvzg_lzbj</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_dnqvhtr_jzm</c>
+                  <c>143413</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_mpb_dvlb_prqfqf</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_zzvnq_lznpqbrd_lfrctthp</c>
+                  <c>316313</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_njfmmj_gjgftj</c>
+                  <c>56593</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_njfmmj_sppmmj</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_fnwsmj</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb_zhj</c>
+                  <c>192363</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_hvwjc</c>
+                  <c>845218</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_lfrctthp</c>
+                  <c>515930</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd_lfrctthp_fqswn</c>
+                  <c>76154</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_jvvsgbl_tlhttrgs</c>
+                  <c>7093</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_vzh_ccbjg_mcvsbd</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_tlhttrgs_tlhttrgs</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_qlrn_wbgvqpc</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb_ghzsqrn</c>
+                  <c>565016</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm_cwjbzd</c>
+                  <c>337780</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lrtsts_drtrdnsg_sppmmj</c>
+                  <c>319859</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_dnqvhtr_sppmmj</c>
+                  <c>902631</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_lfrctthp_lfrctthp</c>
+                  <c>25083</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zmlpwlm</c>
+                  <c>232644</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_jqpzj</c>
+                  <c>7675</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_tlhttrgs</c>
+                  <c>270237</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_lwqdqm_bdgnmf</c>
+                  <c>146880</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_lwqdqm_dvlb</c>
+                  <c>184438</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_rtpwjds_sdssvrst</c>
+                  <c>114380</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_zzvnq_vnmhs</c>
+                  <c>16118</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_jqcms_jzqbnpn</c>
+                  <c>112583</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_jqcms_ssr</c>
+                  <c>205621</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lrtsts_lfrctthp</c>
+                  <c>198780</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_nsw</c>
+                  <c>210254</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_tvsvr</c>
+                  <c>237626</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_vpltwcs</c>
+                  <c>146745</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_rbtbtt_wqmvzg</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd_dfqpqqw</c>
+                  <c>67239</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd_lfrctthp</c>
+                  <c>241343</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd_sppmmj</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_mpb_dvlb</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_ndn_hfq</c>
+                  <c>732772</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_zzvnq_pvdz</c>
+                  <c>247863</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_qpzqp_ddclns</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_scwnmrds_sppmmj</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_vhj_jnm_sppmmj</c>
+                  <c>300169</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_lfrctthp_srf</c>
+                  <c>396112</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_qlrn</c>
+                  <c>610960</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb_ldmwm</c>
+                  <c>663767</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_vzh_ccbjg</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_zzvnq_lznpqbrd</c>
+                  <c>417949</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_zzvnq_pddfg</c>
+                  <c>147410</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_jqcms_cwjbzd</c>
+                  <c>205638</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lrtsts_drtrdnsg</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_tlhttrgs</c>
+                  <c>519868</c>
+                  <c>2</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_jvvsgbl</c>
+                  <c>277259</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_njfmmj</c>
+                  <c>25879</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf_sppmmj</c>
+                  <c>599899</c>
+                  <c>3</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs_zjghthcb</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb_dnqvhtr</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq_dvlb</c>
+                  <c>419050</c>
+                  <c>5</c>
+                  <c>5</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_qrgh</c>
+                  <c>414392</c>
+                  <c>0</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_vhj_lfrctthp</c>
+                  <c>188492</c>
+                  <c>0</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_vhj_tlhttrgs</c>
+                  <c>252680</c>
+                  <c>0</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_rbtbtt</c>
+                  <c>169793</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_mpb</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_ndn</c>
+                  <c>289288</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_rtpwjds</c>
+                  <c>472745</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_sqhvvsb</c>
+                  <c>477703</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_vzh</c>
+                  <c>690920</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_qpzqp</c>
+                  <c>649493</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_scwnmrds</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_vhj_jnm</c>
+                  <c>603328</c>
+                  <c>1</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_lfrctthp</c>
+                  <c>367986</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_tlhttrgs</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_lwqdqm</c>
+                  <c>89596</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lrtsts</c>
+                  <c>41195</c>
+                  <c>2</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn_pjzpjjq</c>
+                  <c>723798</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_cwjbzd</c>
+                  <c>691036</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_jqcms</c>
+                  <c>553120</c>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_dvlb</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp_zzvnq</c>
+                  <c>369560</c>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf_lvchpdf</c>
+                  <c>213881</c>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_ltwmz</c>
+                  <c>243152</c>
+                  <c>0</c>
+                  <c>7</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_vhj</c>
+                  <c>529286</c>
+                  <c>3</c>
+                  <c>7</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_jssbn</c>
+                  <c>671649</c>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_nmzntmcf</c>
+                  <c>0</c>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/_lfrctthp</c>
+                  <c>442942</c>
+                  <c>9</c>
+                  <c>7</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>/</c>
+                  <c>826898</c>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>8</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="56" source="TextInput:" type="V_String" />
+            <Field name="Size" source="TextInput:" type="Int32" />
+            <Field name="NumFolders" source="TextInput:" type="Byte" />
+            <Field name="Levels" source="TextInput:" type="Byte" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="93">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1854" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>AllFolders</Name>
+          <Abbrev>A</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="94">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1434" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Known Sizes</Name>
+          <Abbrev>K</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="95">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1326" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="56" source="(Multiple Sources)" type="V_String" />
+            <Field name="Size" source="(Multiple Sources)" type="Int64" />
+            <Field name="NumFolders" source="TextInput:" type="Byte" />
+            <Field name="Levels" source="TextInput:" type="Byte" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="96">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1494" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="56" source="(Multiple Sources)" type="V_String" />
+            <Field name="Size" source="(Multiple Sources)" type="Int64" />
+            <Field name="NumFolders" source="TextInput:" type="Byte" />
+            <Field name="Levels" source="TextInput:" type="Byte" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="97">
+      <GuiSettings>
+        <Position x="1434" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="98">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1590" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-08 17:51:58</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2022-12-08 17:51:58</StartDate>
+              <EndDate>2022-12-08 17:51:58</EndDate>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] != 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Path" size="56" source="(Multiple Sources)" type="V_String" />
+            <Field name="Size" source="(Multiple Sources)" type="Int64" />
+            <Field name="NumFolders" source="TextInput:" type="Byte" />
+            <Field name="Levels" source="TextInput:" type="Byte" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Path" size="56" source="(Multiple Sources)" type="V_String" />
+            <Field name="Size" source="(Multiple Sources)" type="Int64" />
+            <Field name="NumFolders" source="TextInput:" type="Byte" />
+            <Field name="Levels" source="TextInput:" type="Byte" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="99">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1686" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="56" source="(Multiple Sources)" type="V_String" />
+            <Field name="Size" source="(Multiple Sources)" type="Int64" />
+            <Field name="NumFolders" source="TextInput:" type="Byte" />
+            <Field name="Levels" source="TextInput:" type="Byte" />
+            <Field name="Max_Levels" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="100">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="402" y="126" width="120" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Choose a folder level, working from lowest upwards</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="101">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="558" y="126" width="120" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Find parent folder</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="102">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="822" y="294" width="312" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Join to parent folder and add sizes</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="103">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1182" y="126" width="120" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Collect known folder sizes</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="104">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1314" y="426" width="120" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Send all folders back to start
+and choose a stop mechanism</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="72" Connection="True" />
+      <Destination ToolID="78" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="False" />
+      <Destination ToolID="80" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="80" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="Output" />
+      <Destination ToolID="79" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="78" Connection="Output" />
+      <Destination ToolID="89" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="90" Connection="Output" />
+      <Destination ToolID="89" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Join" />
+      <Destination ToolID="83" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="80" Connection="Left" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Join" />
+      <Destination ToolID="97" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Output" />
+      <Destination ToolID="90" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Output" />
+      <Destination ToolID="81" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="92" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="96" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="97" Connection="Output9" />
+      <Destination ToolID="96" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="96" Connection="Output" />
+      <Destination ToolID="98" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="98" Connection="True" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="99" Connection="Output" />
+      <Destination ToolID="93" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC_7_Iterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="c59d758d-bbc9-4c6e-a220-f26dcb5b9701" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="c59d758d-bbc9-4c6e-a220-f26dcb5b9701" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (91)</Name>
+          <ToolId value="91" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (92)</Name>
+              <ToolId value="92" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (93)</Name>
+              <ToolId value="93" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (94)</Name>
+              <ToolId value="94" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="35" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input66</Input>
+        <Output>AllFolders</Output>
+        <IterationLimit value="200" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="74" Selected="False" />
+        <Tool ToolId="76" Selected="False" />
+        <Tool ToolId="92" Selected="True" />
+        <Tool ToolId="93" Selected="True" />
+        <Tool ToolId="94" Selected="True" />
+        <Tool ToolId="97" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

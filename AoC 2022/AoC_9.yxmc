@@ -1,0 +1,1240 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="246" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[RecordID] <= [Engine.IterationNumber]
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[[RecordID] <= [Engine.IterationNumber]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="90" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input5</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="25" />
+              <Fields>
+                <Field name="RecordID" />
+                <Field name="Input" />
+                <Field name="Instruction" />
+                <Field name="Move" />
+                <Field name="dir" />
+                <Field name="amount" />
+                <Field name="H_x" />
+                <Field name="H_y" />
+                <Field name="T_x" />
+                <Field name="T_y" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>R 4</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>R</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>R 4</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>R</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>R 4</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>R</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>R 4</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>R</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>U 4</c>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>U</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>U 4</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>U</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>U 4</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>U</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>U 4</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>U</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>L 3</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>L</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>L 3</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>L</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>4</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>L 3</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>L</c>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>D 1</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>D</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>13</c>
+                  <c>R 4</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>R</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>14</c>
+                  <c>R 4</c>
+                  <c>5</c>
+                  <c>2</c>
+                  <c>R</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>15</c>
+                  <c>R 4</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>R</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>16</c>
+                  <c>R 4</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>R</c>
+                  <c>4</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>17</c>
+                  <c>D 1</c>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>D</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>18</c>
+                  <c>L 5</c>
+                  <c>7</c>
+                  <c>1</c>
+                  <c>L</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>19</c>
+                  <c>L 5</c>
+                  <c>7</c>
+                  <c>2</c>
+                  <c>L</c>
+                  <c>5</c>
+                  <c>3</c>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>20</c>
+                  <c>L 5</c>
+                  <c>7</c>
+                  <c>3</c>
+                  <c>L</c>
+                  <c>5</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>21</c>
+                  <c>L 5</c>
+                  <c>7</c>
+                  <c>4</c>
+                  <c>L</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>22</c>
+                  <c>L 5</c>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>L</c>
+                  <c>5</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>23</c>
+                  <c>R 2</c>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>R</c>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>24</c>
+                  <c>R 2</c>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>R</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>0</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="894" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF ABS([H_x] - [Row-1:T_x]) = 1 AND ABS([H_y] - [Row-1:T_y]) = 1&#xA;THEN [Row-1:T_x] &#xA;&#xA;ELSEIF ABS([H_x] - [Row-1:T_x]) = 1 AND ABS([H_y] - [Row-1:T_y]) = 2  &#xA;THEN IF [H_x] &gt; [Row-1:T_x] THEN [Row-1:T_x]+1 ELSE [Row-1:T_x] -1 ENDIF&#xA;&#xA;ELSEIF ABS([H_x] - [Row-1:T_x]) = 2 &#xA;THEN IF [H_x] &gt; [Row-1:T_x] THEN [Row-1:T_x] +1 ELSE [Row-1:T_x] -1 ENDIF&#xA;&#xA;&#xA;ELSE [Row-1:T_x] ENDIF" field="T_x" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>T_x = IF ABS([H_x] - [Row-1:T_x]) = 1 AND ABS([H_y] - [Row-1:T_y]) = 1
+THEN [Row...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="Formula: IF ABS([H_x] - [Row-1:T_x]) = 1 AND ABS([H_y] - [Row-1:T_y]) = 1&#xA;THEN [Row-1:T_x] &#xA;&#xA;ELSEIF ABS([H_x] - [Row-1:T_x]) = 1 AND ABS([H_y] - [Row-1:T_y]) = 2  &#xA;THEN IF [H_x] &gt; [Row-1:T_x] THEN [Row-1:T_x]+1 ELSE [Row-1:T_x] -1 ENDIF&#xA;&#xA;ELSEIF ABS([H_x] - [Row-1:T_x]) = 2 &#xA;THEN IF [H_x] &gt; [Row-1:T_x] THEN [Row-1:T_x] +1 ELSE [Row-1:T_x] -1 ENDIF&#xA;&#xA;&#xA;ELSE [Row-1:T_x] ENDIF" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+            <Field name="Row-1:T_x" source="Formula: [T_x]" type="Int32" />
+            <Field name="Row-1:T_y" source="Formula: [T_y]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1038" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="// If diagonal which requires T to move&#xA;&#xA;IF ABS([H_y] - [Row-1:T_y]) = 1 AND ABS([H_x] - [Row-1:T_x]) = 1  &#xA;THEN [Row-1:T_y]&#xA;&#xA;ELSEIF ABS([H_y] - [Row-1:T_y]) = 1 AND ABS([H_x] - [Row-1:T_x]) = 2  &#xA;THEN IF [H_y] &gt; [Row-1:T_y] THEN [Row-1:T_y]+1 ELSE [Row-1:T_y] -1 ENDIF&#xA;&#xA;ELSEIF ABS([H_y] - [Row-1:T_y]) = 2 &#xA;THEN IF [H_y] &gt; [Row-1:T_y] THEN [Row-1:T_y] +1 ELSE [Row-1:T_y] -1 ENDIF&#xA;&#xA;&#xA;ELSE [Row-1:T_y] ENDIF" field="T_y" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>T_y = // If diagonal which requires T to move
+
+IF ABS([H_y] - [Row-1:T_y]) = 1 A...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="Formula: IF ABS([H_x] - [Row-1:T_x]) = 1 AND ABS([H_y] - [Row-1:T_y]) = 1&#xA;THEN [Row-1:T_x] &#xA;&#xA;ELSEIF ABS([H_x] - [Row-1:T_x]) = 1 AND ABS([H_y] - [Row-1:T_y]) = 2  &#xA;THEN IF [H_x] &gt; [Row-1:T_x] THEN [Row-1:T_x]+1 ELSE [Row-1:T_x] -1 ENDIF&#xA;&#xA;ELSEIF ABS([H_x] - [Row-1:T_x]) = 2 &#xA;THEN IF [H_x] &gt; [Row-1:T_x] THEN [Row-1:T_x] +1 ELSE [Row-1:T_x] -1 ENDIF&#xA;&#xA;&#xA;ELSE [Row-1:T_x] ENDIF" type="Int32" />
+            <Field name="T_y" source="Formula: // If diagonal which requires T to move&#xA;&#xA;IF ABS([H_y] - [Row-1:T_y]) = 1 AND ABS([H_x] - [Row-1:T_x]) = 1  &#xA;THEN [Row-1:T_y]&#xA;&#xA;ELSEIF ABS([H_y] - [Row-1:T_y]) = 1 AND ABS([H_x] - [Row-1:T_x]) = 2  &#xA;THEN IF [H_y] &gt; [Row-1:T_y] THEN [Row-1:T_y]+1 ELSE [Row-1:T_y] -1 ENDIF&#xA;&#xA;ELSEIF ABS([H_y] - [Row-1:T_y]) = 2 &#xA;THEN IF [H_y] &gt; [Row-1:T_y] THEN [Row-1:T_y] +1 ELSE [Row-1:T_y] -1 ENDIF&#xA;&#xA;&#xA;ELSE [Row-1:T_y] ENDIF" type="Int32" />
+            <Field name="Row-1:T_x" source="Formula: [T_x]" type="Int32" />
+            <Field name="Row-1:T_y" source="Formula: [T_y]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1170" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RecordID" selected="True" />
+            <SelectField field="Input" selected="True" />
+            <SelectField field="Instruction" selected="True" />
+            <SelectField field="Move" selected="True" />
+            <SelectField field="dir" selected="True" />
+            <SelectField field="amount" selected="True" />
+            <SelectField field="H_x" selected="True" />
+            <SelectField field="H_y" selected="True" />
+            <SelectField field="T_x" selected="True" />
+            <SelectField field="T_y" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="Formula: IF ABS([H_x] - [Row-1:T_x]) = 1 AND ABS([H_y] - [Row-1:T_y]) = 1&#xA;THEN [Row-1:T_x] &#xA;&#xA;ELSEIF ABS([H_x] - [Row-1:T_x]) = 1 AND ABS([H_y] - [Row-1:T_y]) = 2  &#xA;THEN IF [H_x] &gt; [Row-1:T_x] THEN [Row-1:T_x]+1 ELSE [Row-1:T_x] -1 ENDIF&#xA;&#xA;ELSEIF ABS([H_x] - [Row-1:T_x]) = 2 &#xA;THEN IF [H_x] &gt; [Row-1:T_x] THEN [Row-1:T_x] +1 ELSE [Row-1:T_x] -1 ENDIF&#xA;&#xA;&#xA;ELSE [Row-1:T_x] ENDIF" type="Int32" />
+            <Field name="T_y" source="Formula: // If diagonal which requires T to move&#xA;&#xA;IF ABS([H_y] - [Row-1:T_y]) = 1 AND ABS([H_x] - [Row-1:T_x]) = 1  &#xA;THEN [Row-1:T_y]&#xA;&#xA;ELSEIF ABS([H_y] - [Row-1:T_y]) = 1 AND ABS([H_x] - [Row-1:T_x]) = 2  &#xA;THEN IF [H_y] &gt; [Row-1:T_y] THEN [Row-1:T_y]+1 ELSE [Row-1:T_y] -1 ENDIF&#xA;&#xA;ELSEIF ABS([H_y] - [Row-1:T_y]) = 2 &#xA;THEN IF [H_y] &gt; [Row-1:T_y] THEN [Row-1:T_y] +1 ELSE [Row-1:T_y] -1 ENDIF&#xA;&#xA;&#xA;ELSE [Row-1:T_y] ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1470" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Done</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1710" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Repeat</Name>
+          <Abbrev>R</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1542" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="(Multiple Sources)" type="Int32" />
+            <Field name="T_y" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="330" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[
+[RecordID] = [Engine.IterationNumber]
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[
+[RecordID] = [Engine.IterationNumber]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1218" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="Formula: IF ABS([H_x] - [Row-1:T_x]) = 1 AND ABS([H_y] - [Row-1:T_y]) = 1&#xA;THEN [Row-1:T_x] &#xA;&#xA;ELSEIF ABS([H_x] - [Row-1:T_x]) = 1 AND ABS([H_y] - [Row-1:T_y]) = 2  &#xA;THEN IF [H_x] &gt; [Row-1:T_x] THEN [Row-1:T_x]+1 ELSE [Row-1:T_x] -1 ENDIF&#xA;&#xA;ELSEIF ABS([H_x] - [Row-1:T_x]) = 2 &#xA;THEN IF [H_x] &gt; [Row-1:T_x] THEN [Row-1:T_x] +1 ELSE [Row-1:T_x] -1 ENDIF&#xA;&#xA;&#xA;ELSE [Row-1:T_x] ENDIF" type="Int32" />
+            <Field name="T_y" source="Formula: // If diagonal which requires T to move&#xA;&#xA;IF ABS([H_y] - [Row-1:T_y]) = 1 AND ABS([H_x] - [Row-1:T_x]) = 1  &#xA;THEN [Row-1:T_y]&#xA;&#xA;ELSEIF ABS([H_y] - [Row-1:T_y]) = 1 AND ABS([H_x] - [Row-1:T_x]) = 2  &#xA;THEN IF [H_y] &gt; [Row-1:T_y] THEN [Row-1:T_y]+1 ELSE [Row-1:T_y] -1 ENDIF&#xA;&#xA;ELSEIF ABS([H_y] - [Row-1:T_y]) = 2 &#xA;THEN IF [H_y] &gt; [Row-1:T_y] THEN [Row-1:T_y] +1 ELSE [Row-1:T_y] -1 ENDIF&#xA;&#xA;&#xA;ELSE [Row-1:T_y] ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1374" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_14504_25b0c802d492f841a23872b512ce424d_\Engine_14504_5bee9ed206e18349a92c055f90ca3449~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="570" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="True">
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_RecordID" selected="False" rename="Right_RecordID" input="Right_" />
+                <SelectField field="Right_Input" selected="False" rename="Right_Input" input="Right_" />
+                <SelectField field="Right_Instruction" selected="False" rename="Right_Instruction" input="Right_" />
+                <SelectField field="Right_Move" selected="False" rename="Right_Move" input="Right_" />
+                <SelectField field="Right_dir" selected="False" rename="Right_dir" input="Right_" />
+                <SelectField field="Right_amount" selected="False" rename="Right_amount" input="Right_" />
+                <SelectField field="Right_H_x" selected="False" rename="Right_H_x" input="Right_" />
+                <SelectField field="Right_H_y" selected="False" rename="Right_H_y" input="Right_" />
+                <SelectField field="Right_T_x" selected="True" rename="Row-1:T_x" input="Right_" />
+                <SelectField field="Right_T_y" selected="True" rename="Row-1:T_y" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+            <Field name="Row-1:T_x" source="TextInput:" type="Int32" />
+            <Field name="Row-1:T_y" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="750" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF IsNull([Row-1:T_x]) THEN 0 ELSE [Row-1:T_x] ENDIF" field="Row-1:T_x" size="4" type="Int32" />
+            <FormulaField expression="IF IsNull([Row-1:T_y]) THEN 0 ELSE [Row-1:T_y] ENDIF" field="Row-1:T_y" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Row-1:T_x = IF IsNull([Row-1:T_x]) THEN 0 ELSE [Row-1:T_x] ENDIF
+Row-1:T_y = IF ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+            <Field name="Row-1:T_x" source="Formula: IF IsNull([Row-1:T_x]) THEN 0 ELSE [Row-1:T_x] ENDIF" type="Int32" />
+            <Field name="Row-1:T_y" source="Formula: IF IsNull([Row-1:T_y]) THEN 0 ELSE [Row-1:T_y] ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="342" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[
+[RecordID] = [Engine.IterationNumber]-1
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[
+[RecordID] = [Engine.IterationNumber]-1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="654" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="TextInput:" type="Int32" />
+            <Field name="T_y" source="TextInput:" type="Int32" />
+            <Field name="Row-1:T_x" source="TextInput:" type="Int32" />
+            <Field name="Row-1:T_y" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings>
+        <Position x="1302" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1350" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="(Multiple Sources)" type="Int32" />
+            <Field name="T_y" source="(Multiple Sources)" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1446" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-10 00:09:36</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2022-12-10 00:09:36</StartDate>
+              <EndDate>2022-12-10 00:09:36</EndDate>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] &gt; 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="(Multiple Sources)" type="Int32" />
+            <Field name="T_y" source="(Multiple Sources)" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Instruction" source="TextInput:" type="Int32" />
+            <Field name="Move" source="TextInput:" type="Int32" />
+            <Field name="dir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="amount" source="TextInput:" type="Int32" />
+            <Field name="H_x" source="TextInput:" type="Int32" />
+            <Field name="H_y" source="TextInput:" type="Int32" />
+            <Field name="T_x" source="(Multiple Sources)" type="Int32" />
+            <Field name="T_y" source="(Multiple Sources)" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="3" Connection="False" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="37" Connection="True" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="True" />
+      <Destination ToolID="33" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="True" />
+      <Destination ToolID="33" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="True" />
+      <Destination ToolID="52" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="53" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output9" />
+      <Destination ToolID="53" Connection="Source" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="33" Connection="Join" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="33" Connection="Left" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="True" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (10)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (11)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC_8</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="6c8dc3f5-3672-4ad2-b972-97c4b57957ed" />
+      <Telemetry>
+        <PreviousWorkflowId value="b48a6b14-3a58-42b1-95fb-dff25969af16" />
+        <OriginWorkflowId value="b48a6b14-3a58-42b1-95fb-dff25969af16" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (4)</Name>
+          <ToolId value="4" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (5)</Name>
+              <ToolId value="5" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (10)</Description>
+              <Name>Macro Output (10)</Name>
+              <ToolId value="10" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (11)</Description>
+              <Name>Macro Output (11)</Name>
+              <ToolId value="11" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input5</Input>
+        <Output>Repeat</Output>
+        <IterationLimit value="12500" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="10" Selected="True" />
+        <Tool ToolId="11" Selected="True" />
+        <Tool ToolId="24" Selected="False" />
+        <Tool ToolId="52" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

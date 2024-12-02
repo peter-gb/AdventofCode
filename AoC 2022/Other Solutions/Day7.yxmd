@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="21">AdventOfCode_7_input.txt</File>
+          <FormatSpecificOptions>
+            <TrimWhiteSpace>Unset</TrimWhiteSpace>
+            <LineEndStyle>Unset</LineEndStyle>
+            <AllowLongLines>Unset</AllowLongLines>
+            <CodePage>65001</CodePage>
+            <AllowShortLines>Unset</AllowShortLines>
+            <FlatFileXML>
+              <flatfile version="1">
+                <file eoltype="crlf" allowShortLines="t" allowLongLines="f" trimWhiteSpace="t" />
+                <fields>
+                  <field name="Field_1" type="V_String" length="19" />
+                </fields>
+              </flatfile>
+            </FlatFileXML>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText>AdventOfCode_7_input.txt</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="19" source="File: C:\Users\a4910125\Desktop\yxmd\AdventOfCode2022\AdventOfCode_7_input.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="138" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Field_1</UpdateField_Name>
+          <CreateField_Name>Path</CreateField_Name>
+          <CreateField_Type>V_String</CreateField_Type>
+          <CreateField_Size>100</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF [Field_1] = "$ cd /"
+THEN ""
+
+ELSEIF [Field_1] = "$ cd .."
+THEN RegEx_Replace([Row-1:Path], "(.*/).*/", "$1")
+
+ELSEIF StartsWith([Field_1], "$ cd ")
+THEN [Row-1:Path] + Replace([Field_1], "$ cd ", "") + "/"
+
+ELSE [Row-1:Path]
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Get Path</AnnotationText>
+          <DefaultAnnotationText>IF [Field_1] = "$ cd /"
+THEN ""
+
+ELSEIF [Field_1] = "$ cd .."...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="19" source="File: C:\Users\a4910125\Desktop\yxmd\AdventOfCode2022\AdventOfCode_7_input.txt" type="V_String" />
+            <Field description="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" name="Path" size="100" source="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="222" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN REGEX_Replace([Field_1], &quot;\d+\s(.*)&quot;, &quot;$1&quot;)&#xA;ELSE Null()&#xA;ENDIF" field="file" size="1073741823" type="V_WString" />
+            <FormulaField expression="IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN ToNumber(&#xA;  REGEX_Replace([Field_1], &quot;(\d+)\s.*&quot;, &quot;$1&quot;)&#xA;)&#xA;ELSE Null()&#xA;ENDIF" field="size" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Get Size
+&amp; File Name</AnnotationText>
+          <DefaultAnnotationText>file = IF REGEX_Match([Field_1], "\d.*")
+THEN REGEX_Replace([Field_1], "\d+\s(.*...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="19" source="File: C:\Users\a4910125\Desktop\yxmd\AdventOfCode2022\AdventOfCode_7_input.txt" type="V_String" />
+            <Field description="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" name="Path" size="100" source="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" type="V_String" />
+            <Field name="file" size="1073741823" source="Formula: IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN REGEX_Replace([Field_1], &quot;\d+\s(.*)&quot;, &quot;$1&quot;)&#xA;ELSE Null()&#xA;ENDIF" type="V_WString" />
+            <Field name="size" source="Formula: IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN ToNumber(&#xA;  REGEX_Replace([Field_1], &quot;(\d+)\s.*&quot;, &quot;$1&quot;)&#xA;)&#xA;ELSE Null()&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="318" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotNull</Operator>
+            <Field>size</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-08 08:42:15</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2022-12-08 08:42:15</StartDate>
+              <EndDate>2022-12-08 08:42:15</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([size])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Field_1" size="19" source="File: C:\Users\a4910125\Desktop\yxmd\AdventOfCode2022\AdventOfCode_7_input.txt" type="V_String" />
+            <Field description="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" name="Path" size="100" source="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" type="V_String" />
+            <Field name="file" size="1073741823" source="Formula: IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN REGEX_Replace([Field_1], &quot;\d+\s(.*)&quot;, &quot;$1&quot;)&#xA;ELSE Null()&#xA;ENDIF" type="V_WString" />
+            <Field name="size" source="Formula: IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN ToNumber(&#xA;  REGEX_Replace([Field_1], &quot;(\d+)\s.*&quot;, &quot;$1&quot;)&#xA;)&#xA;ELSE Null()&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Field_1" size="19" source="File: C:\Users\a4910125\Desktop\yxmd\AdventOfCode2022\AdventOfCode_7_input.txt" type="V_String" />
+            <Field description="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" name="Path" size="100" source="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" type="V_String" />
+            <Field name="file" size="1073741823" source="Formula: IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN REGEX_Replace([Field_1], &quot;\d+\s(.*)&quot;, &quot;$1&quot;)&#xA;ELSE Null()&#xA;ENDIF" type="V_WString" />
+            <Field name="size" source="Formula: IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN ToNumber(&#xA;  REGEX_Replace([Field_1], &quot;(\d+)\s.*&quot;, &quot;$1&quot;)&#xA;)&#xA;ELSE Null()&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="318" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="Path" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Unique">
+          <RecordInfo>
+            <Field name="Field_1" size="19" source="File: C:\Users\a4910125\Desktop\yxmd\AdventOfCode2022\AdventOfCode_7_input.txt" type="V_String" />
+            <Field description="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" name="Path" size="100" source="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" type="V_String" />
+            <Field name="file" size="1073741823" source="Formula: IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN REGEX_Replace([Field_1], &quot;\d+\s(.*)&quot;, &quot;$1&quot;)&#xA;ELSE Null()&#xA;ENDIF" type="V_WString" />
+            <Field name="size" source="Formula: IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN ToNumber(&#xA;  REGEX_Replace([Field_1], &quot;(\d+)\s.*&quot;, &quot;$1&quot;)&#xA;)&#xA;ELSE Null()&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Path" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Duplicates">
+          <RecordInfo>
+            <Field name="Field_1" size="19" source="File: C:\Users\a4910125\Desktop\yxmd\AdventOfCode2022\AdventOfCode_7_input.txt" type="V_String" />
+            <Field description="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" name="Path" size="100" source="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" type="V_String" />
+            <Field name="file" size="1073741823" source="Formula: IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN REGEX_Replace([Field_1], &quot;\d+\s(.*)&quot;, &quot;$1&quot;)&#xA;ELSE Null()&#xA;ENDIF" type="V_WString" />
+            <Field name="size" source="Formula: IF REGEX_Match([Field_1], &quot;\d.*&quot;)&#xA;THEN ToNumber(&#xA;  REGEX_Replace([Field_1], &quot;(\d+)\s.*&quot;, &quot;$1&quot;)&#xA;)&#xA;ELSE Null()&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Path" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="390" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field_1" selected="False" />
+            <SelectField field="Path" selected="True" size="255" />
+            <SelectField field="file" selected="False" />
+            <SelectField field="size" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Unique
+Path List</AnnotationText>
+          <DefaultAnnotationText>Unique
+Path List</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" name="Path" size="255" source="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="666" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Sum_size] &lt;= 100000</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Sum_size] &lt;= 100000</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Path" size="255" source="TextInput: (BatchMacro)" type="String" />
+            <Field name="Sum_size" source="Summarize: Sum - size (BatchMacro)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Path" size="255" source="TextInput: (BatchMacro)" type="String" />
+            <Field name="Sum_size" source="Summarize: Sum - size (BatchMacro)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="834" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Sum_size" action="Sum" rename="Sum_Sum_size" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sum_Sum_size" source="Summarize: Sum - Sum_size" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings>
+        <Position x="558" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="BatchMacroGroupBy" />
+          <Value name="ControlParams"><![CDATA[Control Parameter (6)=Path
+]]></Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>AocDay7 (20)</Name>
+          <AnnotationText>Total size of files
+under the path</AnnotationText>
+          <DefaultAnnotationText>Sum all files
+under the path</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit>
+            <Dependency Path="_externals\1\AocDay7.yxmc" Package="True" IsMacro="True" IsOutput="False" IsAlias="False" />
+          </Implicit>
+        </Dependencies>
+        <MetaInfo connection="Output4">
+          <RecordInfo>
+            <Field name="Path" size="255" source="TextInput: (BatchMacro)" type="String" />
+            <Field name="Sum_size" source="Summarize: Sum - size (BatchMacro)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="_externals\1\AocDay7.yxmc" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="462" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Skip</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Skip Root directory</AnnotationText>
+          <DefaultAnnotationText>Skip 1st 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" name="Path" size="255" source="Formula: IF [Field_1] = &quot;$ cd /&quot;&#xA;THEN &quot;&quot;&#xA;&#xA;ELSEIF [Field_1] = &quot;$ cd ..&quot;&#xA;THEN RegEx_Replace([Row-1:Path], &quot;(.*/).*/&quot;, &quot;$1&quot;)&#xA;&#xA;ELSEIF StartsWith([Field_1], &quot;$ cd &quot;)&#xA;THEN [Row-1:Path] + Replace([Field_1], &quot;$ cd &quot;, &quot;&quot;) + &quot;/&quot;&#xA;&#xA;ELSE [Row-1:Path]&#xA;ENDIF" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="558" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="size" action="Sum" rename="Sum_size" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sum_size" source="Summarize: Sum - size" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="666" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_Sum_size" selected="True" rename="totalUsage" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="255" source="TextInput: (BatchMacro)" type="String" />
+            <Field name="Sum_size" source="Summarize: Sum - size (BatchMacro)" type="Int64" />
+            <Field name="totalUsage" source="Summarize: Sum - size" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="750" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[totalUsage] - [Sum_size] &lt;= 40000000</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[totalUsage] - [Sum_size] &lt;= 40000000</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Path" size="255" source="TextInput: (BatchMacro)" type="String" />
+            <Field name="Sum_size" source="Summarize: Sum - size (BatchMacro)" type="Int64" />
+            <Field name="totalUsage" source="Summarize: Sum - size" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Path" size="255" source="TextInput: (BatchMacro)" type="String" />
+            <Field name="Sum_size" source="Summarize: Sum - size (BatchMacro)" type="Int64" />
+            <Field name="totalUsage" source="Summarize: Sum - size" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="834" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Sum_size" action="Min" rename="Min_Sum_size" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Min_Sum_size" source="Summarize: Sum - size (BatchMacro)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="True" />
+      <Destination ToolID="28" Connection="Input3" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="28" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="True" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Unique" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="True" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output4" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output4" />
+      <Destination ToolID="35" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="35" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="True" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day7</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="16af3d44-974c-4407-a4f0-544b8758c32d" />
+      <Telemetry>
+        <PreviousWorkflowId value="4e463102-87b8-45e5-a5d9-a239ad8a35d2" />
+        <OriginWorkflowId value="4e463102-87b8-45e5-a5d9-a239ad8a35d2" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
