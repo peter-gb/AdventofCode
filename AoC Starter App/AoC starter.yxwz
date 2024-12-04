@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2022.1">
+<AlteryxDocument yxmdVer="2024.2">
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
@@ -40,21 +40,21 @@
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="&quot;https://adventofcode.com/2022/day/&quot;+ToString([day])+&quot;/input&quot;" field="url" size="1073741823" type="V_WString" />
+            <FormulaField expression="&quot;https://adventofcode.com/&quot;+[#2]+&quot;/day/&quot;+ToString([day])+&quot;/input&quot;" field="url" size="1073741823" type="V_WString" />
             <FormulaField expression="'session='+[#1]" field="cookie" size="1000" type="String" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="2">
           <Name />
-          <DefaultAnnotationText>url = "https://adventofcode.com/2022/day/"+ToString([day])+"/input"
-cookie = 'se...</DefaultAnnotationText>
+          <DefaultAnnotationText>url = "https://adventofcode.com/"+[#2]+"/day/"+ToString([day])+"/input"
+cookie =...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="day" source="TextInput:" type="Int16" />
             <Field name="Session ID" source="TextInput:" type="Bool" />
-            <Field name="url" size="1073741823" source="Formula: &quot;https://adventofcode.com/2022/day/&quot;+ToString([day])+&quot;/input&quot;" type="V_WString" />
+            <Field name="url" size="1073741823" source="Formula: &quot;https://adventofcode.com/&quot;+[#2]+&quot;/day/&quot;+ToString([day])+&quot;/input&quot;" type="V_WString" />
             <Field name="cookie" size="1000" source="Formula: 'session='+[#1]" type="String" />
           </RecordInfo>
         </MetaInfo>
@@ -188,7 +188,7 @@ cookie = 'se...</DefaultAnnotationText>
           <OrderChanged value="False" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="day" selected="True" type="String" size="3" />
+            <SelectField field="day" selected="True" rename="replace" type="String" size="3" />
             <SelectField field="Session ID" selected="False" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
@@ -200,7 +200,7 @@ cookie = 'se...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="day" size="3" source="TextInput:" type="String" />
+            <Field name="replace" size="3" source="TextInput:" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -224,7 +224,7 @@ cookie = 'se...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="day" size="3" source="TextInput:" type="String" />
+            <Field name="replace" size="3" source="TextInput:" type="String" />
             <Field name="Find" size="1073741823" source="Formula: '$X'" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
@@ -259,7 +259,7 @@ cookie = 'se...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="25400000" source="File: C:\Users\peter\Documents\GitHub\AdventofCode\AoC Starter App\AoC_X.yxmd" type="V_WString" />
+            <Field name="Field_1" size="25400000" source="File: C:\Users\peter\OneDrive - The Information Lab\Documents\GitHub\AdventofCode\AoC Starter App\AoC_X.yxmd" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -267,7 +267,7 @@ cookie = 'se...</DefaultAnnotationText>
     </Node>
     <Node ToolID="26">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="810" y="558" />
+        <Position x="870" y="558" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -295,13 +295,13 @@ cookie = 'se...</DefaultAnnotationText>
     </Node>
     <Node ToolID="27">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="714" y="414" />
+        <Position x="774" y="414" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FieldFind>Field_1</FieldFind>
           <FieldSearch>Find</FieldSearch>
-          <ReplaceFoundField>day</ReplaceFoundField>
+          <ReplaceFoundField>replace</ReplaceFoundField>
           <FindMode>FindAny</FindMode>
           <NoCase value="False" />
           <MatchWholeWord value="False" />
@@ -316,7 +316,7 @@ cookie = 'se...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="25400000" source="File: C:\Users\peter\Documents\GitHub\AdventofCode\AoC Starter App\AoC_X.yxmd" type="V_WString" />
+            <Field name="Field_1" size="25400000" source="File: C:\Users\peter\OneDrive - The Information Lab\Documents\GitHub\AdventofCode\AoC Starter App\AoC_X.yxmd" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -400,6 +400,113 @@ cookie = 'se...</DefaultAnnotationText>
         </Annotation>
       </Properties>
     </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+        <Position x="186" y="66" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Text Box (33)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="378" y="762" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="replace" />
+          </Fields>
+          <Data>
+            <r>
+              <c />
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="replace" source="TextInput:" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="366" y="654" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="558" y="762" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'$YEAR$'" field="Find" size="1073741823" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Find = '$YEAR$'
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="replace" source="TextInput:" type="Bool" />
+            <Field name="Find" size="1073741823" source="Formula: '$YEAR$'" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="678" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="replace" size="5" source="TextInput:" type="V_String" />
+            <Field name="Find" size="1073741823" source="Formula: (Multiple Sources)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
         <Position x="446" y="197" width="525" height="133" />
@@ -463,7 +570,7 @@ cookie = 'se...</DefaultAnnotationText>
               <RecordInfo>
                 <Field name="day" source="TextInput:" type="Int16" />
                 <Field name="Session ID" source="TextInput:" type="Bool" />
-                <Field name="url" size="1073741823" source="Formula: &quot;https://adventofcode.com/2022/day/&quot;+ToString([day])+&quot;/input&quot;" type="V_WString" />
+                <Field name="url" size="1073741823" source="Formula: &quot;https://adventofcode.com/&quot;+[#2]+&quot;/day/&quot;+ToString([day])+&quot;/input&quot;" type="V_WString" />
                 <Field name="cookie" size="1000" source="Formula: 'session='+[#1]" type="String" />
                 <Field name="DownloadData" size="1073741823" source="Download" type="V_WString" />
                 <Field name="DownloadHeaders" size="2147483647" source="Download" type="V_String" />
@@ -494,7 +601,7 @@ cookie = 'se...</DefaultAnnotationText>
               <RecordInfo>
                 <Field name="day" source="TextInput:" type="Int16" />
                 <Field name="Session ID" source="TextInput:" type="Bool" />
-                <Field name="url" size="1073741823" source="Formula: &quot;https://adventofcode.com/2022/day/&quot;+ToString([day])+&quot;/input&quot;" type="V_WString" />
+                <Field name="url" size="1073741823" source="Formula: &quot;https://adventofcode.com/&quot;+[#2]+&quot;/day/&quot;+ToString([day])+&quot;/input&quot;" type="V_WString" />
                 <Field name="cookie" size="1000" source="Formula: 'session='+[#1]" type="String" />
                 <Field name="DownloadData" size="1073741823" source="Download" type="V_WString" />
                 <Field name="DownloadHeaders" size="2147483647" source="Download" type="V_String" />
@@ -594,6 +701,10 @@ cookie = 'se...</DefaultAnnotationText>
       <Destination ToolID="2" Connection="Input" />
     </Connection>
     <Connection name="#2">
+      <Origin ToolID="33" Connection="Question" />
+      <Destination ToolID="2" Connection="Question" />
+    </Connection>
+    <Connection name="#2">
       <Origin ToolID="20" Connection="Action" />
       <Destination ToolID="19" Connection="Action" />
     </Connection>
@@ -609,13 +720,21 @@ cookie = 'se...</DefaultAnnotationText>
       <Origin ToolID="23" Connection="Output" />
       <Destination ToolID="24" Connection="Input" />
     </Connection>
-    <Connection>
+    <Connection name="#1">
       <Origin ToolID="24" Connection="Output" />
-      <Destination ToolID="27" Connection="Source" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="25" Connection="Output" />
       <Destination ToolID="27" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="27" Connection="Source" />
     </Connection>
     <Connection>
       <Origin ToolID="27" Connection="Output" />
@@ -640,6 +759,18 @@ cookie = 'se...</DefaultAnnotationText>
     <Connection name="#1">
       <Origin ToolID="30" Connection="Question" />
       <Destination ToolID="32" Connection="Question" />
+    </Connection>
+    <Connection name="#1" Wireless="True">
+      <Origin ToolID="33" Connection="Question" />
+      <Destination ToolID="35" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="35" Connection="Action" />
+      <Destination ToolID="34" Connection="Action" />
     </Connection>
     <Connection>
       <Origin ToolID="3" Connection="Output" />
@@ -671,6 +802,7 @@ cookie = 'se...</DefaultAnnotationText>
     <ShowConnectionStatusOnlyWhenRunning value="False" />
     <ZoomLevel value="0" />
     <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
     <Constants>
       <Constant>
         <Namespace>Question</Namespace>
@@ -687,6 +819,12 @@ cookie = 'se...</DefaultAnnotationText>
       <Constant>
         <Namespace>Question</Namespace>
         <Name>Folder Browse (30)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Text Box (33)</Name>
         <Value />
         <IsNumeric value="False" />
       </Constant>
@@ -713,6 +851,7 @@ cookie = 'se...</DefaultAnnotationText>
         <PreviousWorkflowId value="2ef5d079-afc2-499a-9ce5-c67ec070b26c" />
         <OriginWorkflowId value="570cd98a-182d-46e3-96be-e768982fa06c" />
       </Telemetry>
+      <PlatformWorkflowId value="" />
     </MetaInfo>
     <Events>
       <Enabled value="True" />
@@ -771,6 +910,18 @@ column	1</DynamicConfiguration>
               <Destination>28/File</Destination>
               <Mode>Expression</Mode>
             </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="35" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>34/Data/r[1]/c[1]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	1</DynamicConfiguration>
+              <DefaultConfiguration value="True" />
+            </Action>
           </True>
         </NoCondition>
       </Actions>
@@ -807,6 +958,16 @@ column	1</DynamicConfiguration>
               <Description>Choose a location to save a workflow template and today's data input</Description>
               <Name>Folder Browse (30)</Name>
               <ToolId value="30" />
+            </Question>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>AoC Year</Description>
+              <Name>Text Box (33)</Name>
+              <ToolId value="33" />
+              <Default />
+              <Password value="False" />
+              <Multiline value="False" />
+              <Hidden value="False" />
             </Question>
           </Questions>
         </Question>

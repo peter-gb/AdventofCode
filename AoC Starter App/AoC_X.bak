@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2024.2" RunE2="T">
+<AlteryxDocument yxmdVer="2022.1">
   <Nodes>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="54" y="54" width="504" height="84" />
+        <Position x="54" y="54" width="396" height="84" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Text><![CDATA[      ❄   $YEAR$ Day $X | PGB      ❄ ]]></Text>
+          <Text><![CDATA[      ❄    Day $X | PGB      ❄ ]]></Text>
           <Font name="Segoe UI" size="14.25" style="0" />
           <TextColor r="2" g="205" b="2" />
           <FillColor r="14" g="15" b="35" />
@@ -208,7 +208,6 @@ App made by PGB powered by Liu's Macro powered by Balders' workflow all powered 
     <ShowConnectionStatusOnlyWhenRunning value="False" />
     <ZoomLevel value="0" />
     <LayoutType>Horizontal</LayoutType>
-    <IsTemplate value="False" />
     <MetaInfo>
       <NameIsFileName value="True" />
       <Name>AoC_X</Name>
@@ -231,7 +230,6 @@ App made by PGB powered by Liu's Macro powered by Balders' workflow all powered 
         <PreviousWorkflowId value="a498ca60-85a3-4e7c-a5d7-e48cb86ee9a4" />
         <OriginWorkflowId value="a498ca60-85a3-4e7c-a5d7-e48cb86ee9a4" />
       </Telemetry>
-      <PlatformWorkflowId value="" />
     </MetaInfo>
     <Events>
       <Enabled value="True" />
