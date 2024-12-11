@@ -1,0 +1,1935 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2024.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="488" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input25</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="42" />
+              <Fields>
+                <Field name="FileOrderID" />
+                <Field name="Data" />
+                <Field name="Checked?" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>0</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>1</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>2</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>13</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>14</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>15</c>
+                  <c>3</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>16</c>
+                  <c>3</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>17</c>
+                  <c>3</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>18</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>19</c>
+                  <c>4</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>20</c>
+                  <c>4</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>21</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>22</c>
+                  <c>5</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>23</c>
+                  <c>5</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>24</c>
+                  <c>5</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>25</c>
+                  <c>5</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>26</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>27</c>
+                  <c>6</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>28</c>
+                  <c>6</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>29</c>
+                  <c>6</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>30</c>
+                  <c>6</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>31</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>32</c>
+                  <c>7</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>33</c>
+                  <c>7</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>34</c>
+                  <c>7</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>35</c>
+                  <c>.</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>36</c>
+                  <c>8</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>37</c>
+                  <c>8</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>38</c>
+                  <c>8</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>39</c>
+                  <c>8</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>40</c>
+                  <c>9</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>41</c>
+                  <c>9</c>
+                  <c>0</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="2298" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Iterate</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="2322" y="560" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Finish</Name>
+          <Abbrev>F</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[Finish
+]]></AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="162" y="487" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>FileOrderID</UpdateField_Name>
+          <CreateField_Name>BlockID</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF [Data] != [Row-1:Data] 
+THEN [Row-1:BlockID] +1
+ELSE [Row-1:BlockID]
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IF [Data] != [Row-1:Data] 
+THEN [Row-1:BlockID] +1
+ELSE [Row-...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+            <Field name="BlockID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="390" y="223" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>Data</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-09 13:07:49</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>.</Operand>
+              <StartDate>2024-12-09 13:07:49</StartDate>
+              <EndDate>2024-12-09 13:07:49</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Data] != "."</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="BlockID" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Size" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="BlockID" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Size" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="258" y="221" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="BlockID" action="GroupBy" rename="BlockID" />
+            <SummarizeField field="Data" action="GroupBy" rename="Data" />
+            <SummarizeField field="FileOrderID" action="Min" rename="Min_FileOrderID" />
+            <SummarizeField field="FileOrderID" action="Count" rename="Size" />
+            <SummarizeField field="Checked?" action="GroupBy" rename="Checked?" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BlockID" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Size" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="353" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_22244_7ca66d45e44a46eb892881eca7563bb1_\Engine_22244_9ced5a3036e64c5cac407d1b0f8a5ba3~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="486" y="211" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Data" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Data - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BlockID" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Size" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="546" y="355" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Min_FileOrderID" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Min_FileOrderID - Ascending
+
+Eligible Space blocks</AnnotationText>
+          <DefaultAnnotationText>Min_FileOrderID - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BlockID" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Size" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="725" y="200" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>First 1 rows
+
+Select file ID for moving/checking</AnnotationText>
+          <DefaultAnnotationText>First 1 rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BlockID" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Size" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="846" y="368" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_BlockID" selected="True" rename="BlockID_Space" input="Target_" />
+                <SelectField field="Target_Data" selected="True" rename="Data_Space" input="Target_" />
+                <SelectField field="Target_Min_FileOrderID" selected="True" rename="Min_FileOrderID_Space" input="Target_" />
+                <SelectField field="Target_Size" selected="True" rename="Size_Space" input="Target_" />
+                <SelectField field="Source_BlockID" selected="True" rename="BlockID_Files" input="Source_" />
+                <SelectField field="Source_Data" selected="True" rename="Data_Files" input="Source_" />
+                <SelectField field="Source_Min_FileOrderID" selected="True" rename="Min_FileOrderID_Files" input="Source_" />
+                <SelectField field="Source_Size" selected="True" rename="Size_Files" input="Source_" />
+                <SelectField field="Source_Checked?" selected="True" rename="Source_Checked?" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BlockID_Space" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Space" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Space" source="TextInput:" type="Int32" />
+            <Field name="Size_Space" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+            <Field name="BlockID_Files" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Files" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Files" source="TextInput:" type="Int32" />
+            <Field name="Size_Files" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Source_Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="942" y="368" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Size_Space] &gt;= [Size_Files]
+AND
+[Min_FileOrderID_Space] &lt; [Min_FileOrderID_Files]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Size_Space] &gt;= [Size_Files]
+AND
+[Min_FileOrderID_Space] &lt; [Min_FileOrderID_File...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="BlockID_Space" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Space" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Space" source="TextInput:" type="Int32" />
+            <Field name="Size_Space" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+            <Field name="BlockID_Files" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Files" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Files" source="TextInput:" type="Int32" />
+            <Field name="Size_Files" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Source_Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="BlockID_Space" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Space" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Space" source="TextInput:" type="Int32" />
+            <Field name="Size_Space" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+            <Field name="BlockID_Files" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Files" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Files" source="TextInput:" type="Int32" />
+            <Field name="Size_Files" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Source_Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="67">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1050" y="355" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1 rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BlockID_Space" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Space" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Space" source="TextInput:" type="Int32" />
+            <Field name="Size_Space" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+            <Field name="BlockID_Files" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Files" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Files" source="TextInput:" type="Int32" />
+            <Field name="Size_Files" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Source_Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1302" y="356" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\peter\AppData\Local\Temp\Engine_22244_7ca66d45e44a46eb892881eca7563bb1_\Engine_22244_7b34a14f82ce4c4fb96fdf8def549b3a~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1194" y="500" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="BlockID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="BlockID_Space" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_FileOrderID" selected="True" input="Left_" />
+                <SelectField field="Left_Data" selected="True" input="Left_" />
+                <SelectField field="Left_Checked?" selected="True" input="Left_" />
+                <SelectField field="Left_BlockID" selected="True" input="Left_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Get Space</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+            <Field name="BlockID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+            <Field name="BlockID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="BlockID_Space" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Space" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Space" source="TextInput:" type="Int32" />
+            <Field name="Size_Space" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+            <Field name="BlockID_Files" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Files" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Files" source="TextInput:" type="Int32" />
+            <Field name="Size_Files" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Source_Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1290" y="632" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="BlockID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="BlockID_Files" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_FileOrderID" selected="True" input="Left_" />
+                <SelectField field="Left_Data" selected="True" input="Left_" />
+                <SelectField field="Left_Checked?" selected="True" input="Left_" />
+                <SelectField field="Left_BlockID" selected="True" input="Left_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Get File Data</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+            <Field name="BlockID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+            <Field name="BlockID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="BlockID_Space" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Space" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Space" source="TextInput:" type="Int32" />
+            <Field name="Size_Space" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+            <Field name="BlockID_Files" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Files" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Files" source="TextInput:" type="Int32" />
+            <Field name="Size_Files" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Source_Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1434" y="512" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="True">
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_FileOrderID" selected="True" input="Left_" />
+                <SelectField field="Left_Data" selected="True" input="Left_" />
+                <SelectField field="Left_BlockID" selected="True" input="Left_" />
+                <SelectField field="Right_FileOrderID" selected="True" rename="Right_FileOrderID" input="Right_" />
+                <SelectField field="Right_Data" selected="True" rename="Right_Data" input="Right_" />
+                <SelectField field="Right_Checked?" selected="True" input="Right_" />
+                <SelectField field="Right_BlockID" selected="True" rename="Right_BlockID" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+            <Field name="BlockID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="BlockID" type="Int32" />
+            <Field name="Right_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Right_Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+            <Field name="Right_BlockID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+            <Field name="BlockID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1542" y="416" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="FileOrderID" selected="True" />
+            <SelectField field="Data" selected="False" />
+            <SelectField field="Right_Data" selected="True" rename="Data" />
+            <SelectField field="BlockID" selected="False" />
+            <SelectField field="Right_FileOrderID" selected="False" />
+            <SelectField field="Right_BlockID" selected="False" />
+            <SelectField field="Checked?" selected="True" />
+            <SelectField field="Right_Checked?" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Files into space</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="73">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1542" y="512" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="FileOrderID" selected="False" />
+            <SelectField field="Right_FileOrderID" selected="True" rename="FileOrderID" />
+            <SelectField field="Data" selected="True" />
+            <SelectField field="BlockID" selected="False" />
+            <SelectField field="Right_Data" selected="False" />
+            <SelectField field="Right_BlockID" selected="False" />
+            <SelectField field="Checked?" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Space where files came from</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1770" y="416" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="75">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1542" y="308" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="FileOrderID" selected="True" />
+            <SelectField field="Data" selected="True" />
+            <SelectField field="Checked?" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Spare space</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="76">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1542" y="620" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="FileOrderID" selected="True" />
+            <SelectField field="Data" selected="True" />
+            <SelectField field="Checked?" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Remaining data not part of the swap
+Includes data already sorted</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="77">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1890" y="416" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="FileOrderID" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>FileOrderID - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="78">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="618" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Checked?</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-09 14:15:43</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2024-12-09 14:15:43</StartDate>
+              <EndDate>2024-12-09 14:15:43</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Checked = 0
+Remove data already sorted</AnnotationText>
+          <DefaultAnnotationText>[Checked?] = "0"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="BlockID" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Size" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="BlockID" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Size" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="79">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1638" y="416" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="1" field="Checked?" size="1073741823" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Checked? = 1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="Formula: 1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="2010" y="428" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+            <Field name="Count" source="Summarize: Count - BlockID" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="82">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="2106" y="428" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-09 14:30:29</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2024-12-09 14:30:29</StartDate>
+              <EndDate>2024-12-09 14:30:29</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] != 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+            <Field name="Count" source="Summarize: Count - BlockID" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+            <Field name="Count" source="Summarize: Count - BlockID" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="83">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2202" y="416" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="84">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2202" y="560" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+        <Position x="1902" y="752" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <When>Filter</When>
+          <Filter>[Count] != 0</Filter>
+          <Type>Message</Type>
+          <Priority>High</Priority>
+          <Transient>True</Transient>
+          <MessageExpression>Tostring([Count]) + ' remaining'</MessageExpression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Count" source="Summarize: Count - BlockID" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+    </Node>
+    <Node ToolID="147">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1338" y="199" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="1" field="Checked?" size="4" type="Int32" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Checked? = 1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BlockID" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Size" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Formula: 1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="149">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1170" y="212" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="BlockID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="BlockID_Files" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Checked?" selected="True" rename="Right_Checked?" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="BlockID" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Size" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="BlockID" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Size" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+            <Field name="BlockID_Space" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Space" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Space" source="TextInput:" type="Int32" />
+            <Field name="Size_Space" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Right_Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+            <Field name="BlockID_Files" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Files" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Files" source="TextInput:" type="Int32" />
+            <Field name="Size_Files" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Source_Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="BlockID_Space" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Space" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Space" source="TextInput:" type="Int32" />
+            <Field name="Size_Space" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+            <Field name="BlockID_Files" source="Summarize: GroupBy - BlockID" type="Int32" />
+            <Field name="Data_Files" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Min_FileOrderID_Files" source="TextInput:" type="Int32" />
+            <Field name="Size_Files" source="Summarize: Count - BlockID" type="Int64" />
+            <Field name="Source_Checked?" source="Summarize: GroupBy - Checked?" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="150">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1446" y="200" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="BlockID" selected="False" />
+            <SelectField field="Min_FileOrderID" selected="False" />
+            <SelectField field="Size" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>No space!</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Checked?" source="Formula: 1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="151">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1662" y="632" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Data" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Data" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Checked?" selected="False" input="Left_" />
+                <SelectField field="Right_Data" selected="False" rename="Right_Data" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="FileOrderID" source="TextInput:" type="Int32" />
+            <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Checked?" source="Formula: 1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: GroupBy - Data" type="V_String" />
+            <Field name="Checked?" source="Formula: 1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="186">
+      <GuiSettings>
+        <Position x="1710" y="751" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="187">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="138" y="642" width="240" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Identify blocks of data vs blocks of space</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor r="2" g="205" b="2" />
+          <FillColor r="14" g="15" b="35" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="188">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="474" y="114" width="240" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Prioritise a block of data to see where it fits</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor r="2" g="205" b="2" />
+          <FillColor r="14" g="15" b="35" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="189">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="858" y="258" width="240" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Choose the best gap if one exists</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor r="2" g="205" b="2" />
+          <FillColor r="14" g="15" b="35" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="190">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1314" y="114" width="240" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>If no space was found, it remains as it is</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor r="2" g="205" b="2" />
+          <FillColor r="14" g="15" b="35" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="191">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1770" y="318" width="240" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Collect records from all outcomes ]]></Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor r="2" g="205" b="2" />
+          <FillColor r="14" g="15" b="35" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="192">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1254" y="414" width="240" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Collect records from blocks involved in swap, and swap space and data</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor r="2" g="205" b="2" />
+          <FillColor r="14" g="15" b="35" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="193">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1710" y="822" width="240" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Termination logic, nothing left to check</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor r="2" g="205" b="2" />
+          <FillColor r="14" g="15" b="35" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="69" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="69" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="True" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="False" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="78" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="65" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="65" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="149" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="149" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Output" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="True" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="70" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Left" />
+      <Destination ToolID="70" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Join" />
+      <Destination ToolID="71" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Join" />
+      <Destination ToolID="71" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Left" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Join" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Join" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Left" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="79" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="151" Connection="Join" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="151" Connection="Left" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="77" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="151" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="150" Connection="Output" />
+      <Destination ToolID="151" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Output" />
+      <Destination ToolID="81" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="Output" />
+      <Destination ToolID="81" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="True" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="True" />
+      <Destination ToolID="186" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Output" />
+      <Destination ToolID="82" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="True" />
+      <Destination ToolID="83" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="False" />
+      <Destination ToolID="84" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="84" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="147" Connection="Output" />
+      <Destination ToolID="150" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Left" />
+      <Destination ToolID="147" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="186" Connection="Output9" />
+      <Destination ToolID="85" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AoC_9</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="4d9932d7-2a84-461e-ae48-4a4d34ee1f71" />
+      <Telemetry>
+        <PreviousWorkflowId value="0c4ed590-eab9-40a2-b388-9e3f4ee34463" />
+        <OriginWorkflowId value="0c4ed590-eab9-40a2-b388-9e3f4ee34463" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (26)</Name>
+          <ToolId value="26" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (25)</Name>
+              <ToolId value="25" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (40)</Name>
+              <ToolId value="40" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (55)</Name>
+              <ToolId value="55" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="21" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input25</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="100000" />
+        <LimitBehavior>Ignore</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="25" Selected="True" />
+        <Tool ToolId="40" Selected="True" />
+        <Tool ToolId="55" Selected="True" />
+        <Tool ToolId="61" Selected="False" />
+        <Tool ToolId="68" Selected="False" />
+        <Tool ToolId="186" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
